@@ -75,6 +75,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.none {
+  display: none;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -87,4 +91,47 @@ body {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
   margin: -1px;
+}
+
+.image-bg img {
+  width: 100%;
+}
+
+.goods-list__item {
+  width: 379px;
+  position: relative;
+}
+.goods-list__description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+}
+.goods-list__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+  color: #575445;
+}
+.goods-list__txt {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  color: #575445;
+}
+.goods-list__link {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #575445;
 }
