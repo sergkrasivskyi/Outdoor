@@ -15,9 +15,9 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header--outdoor">
         <div class="container">
-          <div class="header-logo">
+          <div class="header--logo">
             <!-- logo-outdoor svg -->
             <svg
               width="128"
@@ -35,7 +35,7 @@
             </svg>
             <!-- / logo-outdoor svg -->
           </div>
-          <nav class="menu">
+          <nav class="header--menu menu">
             <ul class="menu__list">
               <li class="menu__item">
                 <a href="#" class="menu__link">Shop</a>
@@ -54,85 +54,250 @@
               </li>
             </ul>
           </nav>
-          <div class="purchase-btn">
-            <a href="#" class="purchase-btn">Buy template</a>
-          </div>
-          <div class="cart-btn">
-            <!-- cart-icon svg-->
-            <a href="#">Cart</a>
-            <!-- items-in-cart-icon svg-->
-          </div>
+          <nav class="header--cart-menu cart-menu">
+            <button class="cart-menu__purchase-btn" type="submit">
+              Buy template
+            </button>
+            <button class="cart-menu__cart-btn" type="submit">
+              Buy
+              <!-- before cart-icon svg-->
+              <!-- after items-in-cart-icon svg-->
+            </button>
+          </nav>
         </div>
       </header>
       <main class="main">
-        <section class="hero">
-          <article class="hero-article">
-            <h3 class="subtitle">OUTDOOR EXPLORATION</h3>
-            <h1 class="hero-title">Gear for when it actually matters.</h1>
-            <p class="hero-text text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
-            </p>
-          </article>
-        </section>
-        <section class="about-us">
-          <div class="container">
-            <figure class="about-us__img">
+        <article class="article--outdoor-gear-store">
+          <h1 class="visually-hidden">Outdoor gear company, outdoor store</h1>
+          <section class="outdoor--hero">
+            <figure class="outdoor--hero__image">
               <img
-                src="./images/about-us-section/about-us-main-image.jpg"
-                alt="about-us-main-image"
+                src="./images/1hero-section/hero-bg.jpg"
+                alt="outdoor adventure image"
               />
               <figcaption class="visually-hidden">
-                We are an outdoor gear company focused on Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit. Nullam scelerisque aliquam
-                odio et faucibus. Nulla rhoncus feugiat eros quis consectetur.
-                Morbi neque ex, condimentum dapibus congue et.
+                A person in excellent equipment from this store conquers the top
+                of the mountain
               </figcaption>
             </figure>
-            <h3 class="subtitle about-us__subtitle">Who are we?</h3>
-            <h2 class="section-title about-us__title">A bit about us.</h2>
-            <p class="section-txt about-us__txt">
-              We are an outdoor gear company focused on Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio
-              et faucibus. Nulla rhoncus feugiat eros quis consectetur. Morbi
-              neque ex, condimentum dapibus congue et.
-            </p>
-            <span class="about-us__read-more">
-              Read more
-              <!-- todo add arrow like ::after -->
-            </span>
-          </div>
-        </section>
-        <section class="our-promice">
-          <div class="container">
-            <div class="our-promice--decription">
-              <h3 class="our-promice--decription__subtitle subtitle">
-                Our promise
-              </h3>
-              <h2 class="our-promice--decription__title section-title">
-                Setting the bar for our products.
+            <div class="outdoor--hero__description">
+              <h4 class="outdoor--hero__subtitle">OUTDOOR EXPLORATION</h4>
+              <h2 class="outdoor--hero__title">
+                Gear for when it actually matters.
               </h2>
+              <p class="outdoor--hero__txt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
             </div>
-            <div class="our-promice--cards">
-              <div class="our-promice--cards__item product-card">
-                <div class="product-card__icon">
-                  <img
-                    src="./images/section-our-promice/cards/1ss-card/ss-icon.svg"
-                    alt="ss-icon"
-                  />
-                </div>
-                <h4 class="product-card__title">Sustainable sourcing</h4>
-                <p class="product-card__txt">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique.
+          </section>
+          <!-- / outdoor--hero section -->
+          <section class="about-us">
+            <div class="container">
+              <figure class="about-us__img">
+                <img
+                  src="./images/2about-us-section/about-us-main-image.jpg"
+                  alt="about-us-main-image"
+                />
+                <figcaption class="visually-hidden">
+                  We are an outdoor gear company
+                </figcaption>
+              </figure>
+              <div class="about-us__description section-decription">
+                <h4 class="about-us__subtitle section-subtitle">Who are we?</h4>
+                <h3 class="about-us__title section-title">A bit about us.</h3>
+                <p class="about-us__txt section-txt">
+                  We are an outdoor gear company focused on Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit. Nullam scelerisque
+                  aliquam odio et faucibus. Nulla rhoncus feugiat eros quis
+                  consectetur. Morbi neque ex, condimentum dapibus congue et.
+                </p>
+                <a class="about-us__read-more-link" href="#">Read more</a>
+                <!-- todo add arrow like ::after -->
+              </div>
+            </div>
+          </section>
+          <!-- / about-us section-->
+          <section class="our-products">
+            <div class="container">
+              <div class="our-products__decription">
+                <h4 class="our-products__subtitle section-subtitle">
+                  Our promise
+                </h4>
+                <h3 class="our-products__title section-title">
+                  Setting the bar for our products.
+                </h3>
+                <p class="our-products__txt section-txt">
+                  Morbi neque ex, condimentum dapibus congue et, vulputate ut
+                  ligula. Vestibulum sit amet urna turpis. Mauris euismod elit
+                  et nisi ultrices, ut faucibus orci tincidunt.
                 </p>
               </div>
-							<!-- todo додати карти, поки що ддодано тільки першу-->
+              <ul class="our-products__list products-list">
+                <!-- card1 ss -->
+                <li class="products-list__item">
+                  <img
+                    src="./images/3section-our-products/cards/1ss-card/ss-icon.svg"
+                    alt="ss-icon"
+                    class="products-list__icon"
+                  />
+                  <h5 class="products-list__title">Sustainable sourcing</h5>
+                  <p class="products-list__txt">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                  </p>
+                </li>
+                <!-- card2 lw -->
+                <li class="products-list__item">
+                  <img
+                    src="./images/3section-our-products/cards/2lw-card/lw-icon.svg"
+                    alt="lw-icon"
+                    class="products-list__icon"
+                  />
+                  <h5 class="products-list__title">Lifetime warranty</h5>
+                  <p class="products-list__txt">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                  </p>
+                </li>
+                <!-- card3 att -->
+                <li class="products-list__item">
+                  <img
+                    src="./images/3section-our-products/cards/3att-card/att-icon.svg"
+                    alt="att-icon"
+                    class="products-list__icon"
+                  />
+                  <h5 class="products-list__title">All-terrain tested</h5>
+                  <p class="products-list__txt">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                  </p>
+                </li>
+                <!-- card4 pm -->
+                <li class="products-list__item">
+                  <img
+                    src="./images/3section-our-products/cards/4pm-card/pm-icon.svg"
+                    alt="pm-icon"
+                    class="products-list__icon"
+                  />
+                  <h5 class="products-list__title">Premium materials</h5>
+                  <p class="products-list__txt">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                  </p>
+                </li>
+                <!-- card5 dby -->
+                <li class="products-list__item">
+                  <img
+                    src="./images/3section-our-products/cards/5dby-card/dby-icon.svg"
+                    alt="dby-icon"
+                    class="products-list__icon"
+                  />
+                  <h5 class="products-list__title">Designed by you</h5>
+                  <p class="products-list__txt">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                  </p>
+                </li>
+                <!-- card6 qa -->
+                <li class="products-list__item">
+                  <img
+                    src="./images/3section-our-products/cards/6qa-card/qa-icon.svg"
+                    alt="qa-icon"
+                    class="products-list__icon"
+                  />
+                  <h5 class="products-list__title">Quality assured</h5>
+                  <p class="products-list__txt">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                  </p>
+                </li>
+              </ul>
             </div>
-          </div>
-        </section>
+          </section>
+          <!-- / our-products section -->
+          <section class="store">
+            <div class="container">
+              <div class="store__description">
+                <h4 class="store__subtitle">Meet the family</h4>
+                <h3 class="store__title">What we have in store for you.</h3>
+                <p class="store__txt">
+                  Morbi neque ex, condimentum dapibus congue et, vulputate ut
+                  ligula. Vestibulum sit amet urna turpis. Mauris euismod elit
+                  et nisi ultrices, ut faucibus orci tincidunt.
+                </p>
+              </div>
+
+              <ul class="store__goods-list goods-list">
+                <!-- accessories -->
+                <li class="goods-list__item">
+                  <div class="image-bg">
+                    <h5 class="goods-list__title">Accessories</h5>
+                    <p class="goods-list__txt">
+                      Accessories you didn't know you needed.
+                    </p>
+                    <a href="#" class="goods-list__link">View Accessories</a>
+                  </div>
+                </li>
+                <!-- apparel -->
+                <li class="goods-list__item">
+                  <div class="image-bg">
+                    <h5 class="goods-list__title">Apparel</h5>
+                    <p class="goods-list__txt">
+                      Check out our line of non-hiking clothes.
+                    </p>
+                    <a href="#" class="goods-list__link">View Apparel</a>
+                  </div>
+                </li>
+                <!-- climbing -->
+                <li class="goods-list__item">
+                  <div class="image-bg">
+                    <h5 class="goods-list__title">Climbing Gear</h5>
+                    <p class="goods-list__txt">
+                      Climbing gear for every occasion.
+                    </p>
+                    <a href="#" class="goods-list__link">View Climbing Gear</a>
+                  </div>
+                </li>
+                <!-- headwear -->
+                <li class="goods-list__item">
+                  <div class="image-bg">
+                    <h5 class="goods-list__title">Headwear</h5>
+                    <p class="goods-list__txt">
+                      Our beanies are so comfy you won't believe it.
+                    </p>
+                    <a href="#" class="goods-list__link">View Headwear</a>
+                  </div>
+                </li>
+                <!-- hiking gear -->
+                <li class="goods-list__item">
+                  <div class="image-bg">
+                    <h5 class="goods-list__title">Hiking Gear</h5>
+                    <p class="goods-list__txt">
+                      Desert or mountain? Doesn't matter.
+                    </p>
+                    <a href="#" class="goods-list__link">View Hiking Gear</a>
+                  </div>
+                </li>
+                <!-- jackets -->
+                <li class="goods-list__item">
+                  <div class="image-bg">
+                    <h5 class="goods-list__title">Jackets</h5>
+                    <p class="goods-list__txt">
+                      Our jackets are perfect for every season.
+                    </p>
+                    <a href="#" class="goods-list__link">View Jackets</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- / store section-->
+        </article>
+        <!-- / article--outdoor-gear-store -->
       </main>
       <footer class="footer"></footer>
     </div>
+    <!-- / wrapper -->
   </body>
 </html>
