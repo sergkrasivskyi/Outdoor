@@ -1,0 +1,58 @@
+.header--outdoor {}
+
+.container {}
+
+.header--logo {}
+
+.header--menu {}
+
+.menu {
+
+	// .menu__list
+
+	&__list {}
+
+	// .menu__item
+
+	&__item {}
+
+	// .menu__link
+
+	&__link {
+		font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 1.08;
+			color: #444444;
+	}
+}
+
+.header--cart-menu {}
+
+.cart-menu {
+
+	// .cart-menu__purchase-btn
+
+	&__purchase-btn {
+		font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 1.4;
+		
+			background-color: #575445;
+			color: #FFFFFF;
+	}
+
+	// .cart-menu__cart-btn
+
+	&__cart-btn {font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.4;
+
+		background-color: #575445;
+		color: #FFFFFF;}
+}

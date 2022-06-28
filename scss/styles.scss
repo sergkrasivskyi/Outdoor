@@ -1,4 +1,15 @@
-@import 'nullstyle.scss';
+@import './styles/nullstyle.scss';
+@import './styles/about-us.scss';
+@import './styles/buyers-guide.scss';
+@import './styles/drone-view.scss';
+@import './styles/footer.scss';
+@import './styles/header.scss';
+@import './styles/hero.scss';
+@import './styles/magazine.scss';
+@import './styles/our-products.scss';
+@import './styles/shop.scss';
+@import './styles/store.scss';
+
 
 // todo: create favicon
 
@@ -62,16 +73,8 @@ body {
 
 	// .menu__link
 
-	&__link {
-		font-family: 'Poppins';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 13px;
-		line-height: 1.08;
-		color: #444444;
-	}
+	&__link {}
 }
-
 .header--cart-menu {}
 
 .cart-menu {
@@ -79,20 +82,13 @@ body {
 	// .cart-menu__purchase-btn
 
 	&__purchase-btn {
-		font-family: 'Poppins';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 1.4;
-		/* identical to box height, or 140% */
-
-		background-color: #575445;
-		color: #FFFFFF;
+		
 	}
 
 	// .cart-menu__cart-btn
 
-	&__cart-btn {}
+	&__cart-btn {
+		}
 }
 
 // -- / header --

@@ -71,8 +71,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------*/
+.menu__link {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.08;
+  color: #444444;
+}
+
+.cart-menu__purchase-btn {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: #575445;
+  color: #FFFFFF;
+}
+.cart-menu__cart-btn {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: #575445;
+  color: #FFFFFF;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #E5E5E5;
 }
 
 .none {
