@@ -1,13 +1,23 @@
 /*styles for about-us section*/
 .about-us {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	column-gap: 104px;
 
 	// .about-us__img
 
-	&__img {}
+	&__img {
+		flex: 0 0 auto;
+	}
 
 	// .about-us__description
 
-	&__description {}
+	&__description {
+		flex: 0 1 400px;
+		// display: flex;
+		// flex-direction: column;
+	}
 
 	// .about-us__subtitle
 
@@ -15,15 +25,20 @@
 
 	// .about-us__title
 
-	&__title {
-	}
+	&__title {}
 
 	// .about-us__txt
 
-	&__txt {}
+	&__txt {
+		margin-bottom: 19px;
+	}
 
 	// .about-us__read-more-link
 	&__link {
 		@include styler($about-us-link-fz, $about-us-link-lh, $about-us-link-cl);
+	}
+
+	&__link svg {
+		margin-left: 4px;
 	}
 }

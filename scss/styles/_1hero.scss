@@ -1,13 +1,19 @@
 /*styles for hero section*/
 .outdoor--hero {
-
+position: relative;
 	// .outdoor--hero__image
 
-	&__image {}
+	&__image img {
+		max-width: 100%;
+	}
 
 	// .outdoor--hero__description
 
-	&__description {}
+	&__description {
+		position: absolute;
+		left: 9.44%; 
+		top: 34%;
+	}
 
 	// .outdoor--hero__subtitle
 
@@ -18,7 +24,7 @@
 	// .outdoor--hero__title
 
 	&__title {
-		@include styler($hero-title-fz, $section-title-lh, $section-title-cl);
+		@include styler($hero-title-fz, $section-title-lh, $hero-title-cl);
 	}
 
 	// .outdoor--hero__txt

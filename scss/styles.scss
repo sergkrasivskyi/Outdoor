@@ -32,6 +32,7 @@ $header-btn-br: 6px;
 
 /* hero */
 $hero-title-fz: 48px;
+$hero-title-cl: #FFFFFF;
 $hero-txt-fz: 17px;
 $hero-txt-lh: 1.48;
 $hero-txt-cl: #CACCD1;
@@ -48,6 +49,7 @@ $products-list-title-lh: 1.2;
 $products-list-txt-fz: 14px;
 $products-list-txt-lh: 1.4;  
 $products-list-cl: #575445;
+
 
 // todo подивитись документацію по scss sass -  додати функції, міксини т.д.
 /* mixins definition*/
@@ -94,9 +96,9 @@ body {
 }
 .container {
 	padding: 0 9.44%;
+	max-width: 100%;
 }
 
-.section-decription {}
 .section-title {
 	@include styler($section-title-fz, $section-title-lh, $section-title-cl);
 	font-family: 'Roboto', sans-serif;

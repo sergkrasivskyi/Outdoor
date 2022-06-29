@@ -113,6 +113,7 @@ body {
 
 .container {
   padding: 0 9.44%;
+  max-width: 100%;
 }
 
 .section-title {
@@ -142,7 +143,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 40px;
+  gap: 3.4%;
   margin: 17px 0;
 }
 
@@ -186,7 +187,7 @@ body {
   content: "";
   width: 17px;
   height: 17px;
-  background-image: url("/images/header/cart-icon.svg");
+  background-image: url("/images/header/cart.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -194,7 +195,7 @@ body {
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url("/images/0header/items-in-cart.svg");
+  background-image: url("/images/0header/cart.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -208,10 +209,21 @@ body {
 }
 
 /*styles for hero section*/
+.outdoor--hero {
+  position: relative;
+}
+.outdoor--hero__image img {
+  max-width: 100%;
+}
+.outdoor--hero__description {
+  position: absolute;
+  left: 9.44%;
+  top: 34%;
+}
 .outdoor--hero__title {
   font-size: 48px;
   line-height: 1.2;
-  color: #575445;
+  color: #FFFFFF;
 }
 .outdoor--hero__txt {
   font-size: 17px;
@@ -220,10 +232,29 @@ body {
 }
 
 /*styles for about-us section*/
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  -moz-column-gap: 104px;
+       column-gap: 104px;
+}
+.about-us__img {
+  flex: 0 0 auto;
+}
+.about-us__description {
+  flex: 0 1 400px;
+}
+.about-us__txt {
+  margin-bottom: 19px;
+}
 .about-us__link {
   font-size: 15px;
   line-height: 1.4;
   color: #575445;
+}
+.about-us__link svg {
+  margin-left: 4px;
 }
 
 /*styles for our-products section*/
@@ -305,6 +336,10 @@ body {
 }
 
 /*styles for drone-view section*/
+.drone-view img {
+  max-width: 100%;
+}
+
 /*styles for shop section*/
 .shop__title {
   font-size: 36px;
