@@ -42,16 +42,13 @@ $about-us-link-cl: #575445;
 
 /* shop */
 $shop-subtitle-cl: #FAFAFC;
-/* our-products */
+/* our-products  */
 $products-list-title-fz: 20px;
 $products-list-title-lh: 1.2;
 $products-list-txt-fz: 14px;
 $products-list-txt-lh: 1.4;  
 $products-list-cl: #575445;
 
-
-
-// todo додати змінні
 // todo подивитись документацію по scss sass -  додати функції, міксини т.д.
 /* mixins definition*/
 @mixin styler($fz, $lh, $cl) {
@@ -68,8 +65,9 @@ $products-list-cl: #575445;
 }
 /* common classes styles*/
 body {
-	// font-family: 'Poppins', sans-serif;
-	font-family: 'Roboto', sans-serif;
+	max-width: 1440px;
+	font-family: 'Poppins', sans-serif;
+	// font-family: 'Roboto', sans-serif;
 	font-size: $main-fz;
 }
 .none {
@@ -90,7 +88,7 @@ body {
 	margin: -1px;
 }
 .wrapper {
-	max-width: 1140px;
+	max-width: 100%;
 }
 .container {
 	padding: 0 9.44%;
@@ -99,6 +97,7 @@ body {
 .section-decription {}
 .section-title {
 	@include styler($section-title-fz, $section-title-lh, $section-title-cl);
+	font-family: 'Roboto', sans-serif;
 }
 .section-subtitle {
 	@include styler($section-subtitle-fz, $section-subtitle-lh, $section-subtitle-cl);
@@ -111,7 +110,7 @@ body {
 
 
 //  header styles
-@import './styles/_header';
+@import './styles/_0header';
 // hero styles
 @import './styles/_1hero';
 // about us styles

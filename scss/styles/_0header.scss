@@ -1,0 +1,82 @@
+/*------- styles for header -----*/
+.header--outdoor {
+	font-family: 'Poppins';
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 40px;
+	margin: 17px 0;
+}
+
+.header--logo {
+	flex: 0 0 128px;
+	align-self: center;
+}
+
+.header--menu {
+	flex: 1 0 460px;
+	justify-content: end;
+}
+
+.header--cart-menu {
+	flex: 0 0 288px;
+
+	display: flex;
+	column-gap: 20px;
+	justify-content: flex-end;
+}
+
+.menu {
+
+	// .menu__list
+	&__list {
+		display: flex;
+		justify-content: end;
+		column-gap: 28px;
+	}
+
+	// .menu__item
+	&__item {}
+
+	// .menu__link
+	&__link {
+		@include styler ($menu-fz, $menu-link-lh, $menu-link-cl);
+	}
+}
+
+.cart-menu {
+
+	&__cart-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__cart-btn::before {
+		content: '';
+		width: 17px;
+		height: 17px;
+		background-image: url('/images/0header/cart-icon.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__cart-btn::after {
+		content: '';
+		width: 20px;
+		height: 20px;
+		background-image: url('/images/0header/items-in-cart.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__purchase-btn,
+	&__cart-btn {
+		@include styler-btn($header-btn-fz, $header-btn-lh, $header-btn-cl, $header-btn-bg-cl, $header-btn-br);
+		padding: 10px 18px;
+		// 
+	}
+
+
+}

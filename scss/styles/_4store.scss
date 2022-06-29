@@ -1,7 +1,37 @@
 /*styles for store section*/
-
 .image-bg img {
 	width: 100%;
+}
+
+.store {
+
+	// .store__description
+
+	&__description {
+		text-align: center;
+	}
+
+	// .store__subtitle
+
+	&__subtitle {}
+
+	// .store__title
+
+	&__title {
+		
+	}
+
+	// .store__txt
+
+	&__txt {}
+
+	// .store__goods-list
+
+	&__goods-list {}
+
+	// .store__link
+
+	&__link {}
 }
 
 .goods-list {

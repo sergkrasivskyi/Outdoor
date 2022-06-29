@@ -1,7 +1,8 @@
 /*styles for our-products section*/
 
 .our-products {
-
+	display: flex;
+	flex-wrap: wrap;
 	// .our-products__decription
 
 	&__decription {
@@ -14,7 +15,9 @@
 
 	// .our-products__title
 
-	&__title {}
+	&__title {
+		font-family: 'Roboto', sans-serif;
+	}
 
 	// .our-products__txt
 
@@ -26,7 +29,9 @@
 }
 
 .products-list {
-
+	display: grid;
+	grid-template-rows: 1fr, 1fr;
+	grid-template-columns: 1fr, 1fr, 1fr;
 	// .products-list__item
 
 	&__item {
@@ -41,13 +46,14 @@
 
 	&__title {
 		@include styler($products-list-title-fz, $products-list-title-lh, $products-list-cl);
+		font-family: 'Roboto', sans-serif;
 		// text-align: center;
 	}
 
 	// .products-list__txt
 
 	&__txt {
-	@include styler($products-list-txt-fz, $products-list-txt-lh, $products-list-cl);
+		@include styler($products-list-txt-fz, $products-list-txt-lh, $products-list-cl);
 		// text-align: center;
 	}
 }
