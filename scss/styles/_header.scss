@@ -1,0 +1,37 @@
+/*------- styles for header -----*/
+.header--outdoor {
+	font-family: 'Poppins';
+	display: flex;
+}
+
+.header--logo {}
+
+.header--menu {}
+
+.menu {
+
+	// .menu__list
+	&__list {
+		display: flex;
+	}
+
+	// .menu__item
+	&__item {
+	}
+
+	// .menu__link
+	&__link {
+		@include styler ($menu-fz, $menu-link-lh, $menu-link-cl);
+	}
+}
+
+.header--cart-menu {}
+
+.cart-menu {
+
+	&__purchase-btn,
+	&__cart-btn {
+		@include styler-btn($header-btn-fz, $header-btn-lh, $header-btn-cl, $header-btn-bg-cl, $header-btn-br);
+	}
+
+}

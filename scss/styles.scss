@@ -1,29 +1,77 @@
-@import './styles/nullstyle.scss';
-@import './styles/about-us.scss';
-@import './styles/buyers-guide.scss';
-@import './styles/drone-view.scss';
-@import './styles/footer.scss';
-@import './styles/header.scss';
-@import './styles/hero.scss';
-@import './styles/magazine.scss';
-@import './styles/our-products.scss';
-@import './styles/shop.scss';
-@import './styles/store.scss';
-
+@import './styles/_nullstyle';
 
 // todo: create favicon
+/*  variables */
+/* common font-sizes */
+$main-fz: 16px;
+$section-title-fz: 36px;
+$section-subtitle-fz: 14px;
+$section-txt-fz: 16px;
+$arrow-fz: 15px;
+/* common colors */
+$section-title-cl: #575445;
+$section-subtitle-cl: #E6B939;
+$section-txt-cl: #575445;
 
-//  variables
+/* common line heights*/
+$section-title-lh: 1.2;
+$section-subtitle-lh: 1.4;
+$section-txt-lh: 1.2;
+
+/* header*/
+$menu-fz: 14px;
+$menu-btn-fz: 16px;
+$menu-link-cl: #444444;
+$menu-link-lh: 1.08;
+$menu-btn-lh: 1.4;
+$header-btn-fz: 16px;
+$header-btn-lh: 1.4;
+$header-btn-bg-cl: #575445;
+$header-btn-cl: #ffffff;
+$header-btn-br: 6px;
+
+/* hero */
+$hero-title-fz: 48px;
+$hero-txt-fz: 17px;
+$hero-txt-lh: 1.48;
+$hero-txt-cl: #CACCD1;
+/*about us */
+$about-us-link-fz:  15px;
+$about-us-link-lh: 1.4;
+$about-us-link-cl: #575445;
+
+/* shop */
+$shop-subtitle-cl: #FAFAFC;
+/* our-products */
+$products-list-title-fz: 20px;
+$products-list-title-lh: 1.2;
+$products-list-txt-fz: 14px;
+$products-list-txt-lh: 1.4;  
+$products-list-cl: #575445;
+
+
+
 // todo додати змінні
 // todo подивитись документацію по scss sass -  додати функції, міксини т.д.
-// ----- variables --------------------------------
+/* mixins definition*/
+@mixin styler($fz, $lh, $cl) {
+	font-size: $fz;
+	line-height: $lh;
+	color: $cl;
+}
+@mixin styler-btn($fz, $lh, $cl, $bg, $br) {
+	font-size: $fz;
+	line-height: $lh;
+	color: $cl;
+	background-color: $bg;
+	border-radius: $br;
+}
+/* common classes styles*/
 body {
 	// font-family: 'Poppins', sans-serif;
 	font-family: 'Roboto', sans-serif;
-	background-color: #E5E5E5;
+	font-size: $main-fz;
 }
-
-// -- common classes --
 .none {
 	display: none;
 }
@@ -33,6 +81,7 @@ body {
 	white-space: nowrap;
 	width: 1px;
 	height: 1px;
+
 	overflow: hidden;
 	border: 0;
 	padding: 0;
@@ -40,28 +89,52 @@ body {
 	clip-path: inset(50%);
 	margin: -1px;
 }
-
-.container {}
+.wrapper {
+	max-width: 1140px;
+}
+.container {
+	padding: 0 9.44%;
+}
 
 .section-decription {}
+.section-title {
+	@include styler($section-title-fz, $section-title-lh, $section-title-cl);
+}
+.section-subtitle {
+	@include styler($section-subtitle-fz, $section-subtitle-lh, $section-subtitle-cl);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.section-txt {
+	@include styler($section-txt-fz, $section-txt-lh, $section-txt-cl);
+}
 
-.section-subtitle {}
 
-.section-title {}
+//  header styles
+@import './styles/_header';
+// hero styles
+@import './styles/_1hero';
+// about us styles
+@import './styles/_2about-us';
+// our products styles
+@import './styles/_3our-products';
+// store section	styles
+@import './styles/_4store';
+// drone views styles
+@import './styles/_5drone-view';
+// shop styles
+@import './styles/_6shop';
+// buyers guide styles
+@import './styles/_7buyers-guide';
+// magazines styles
+@import './styles/_8magazine';
+// footer styles
+@import './styles/_footer';
 
-.section-txt {}
 
-// -- / common classes --
 // -- header --
-.header--outdoor {}
-
-.container {}
-
-.header--logo {}
-
-.header--menu {}
-
 .menu {
+
 
 	// .menu__list
 
@@ -125,102 +198,6 @@ body {
 // -- / hero  --
 // !
 //  -- about us section -- 
-.about-us {
 
-	// .about-us__img
-
-	&__img {}
-
-	// .about-us__description
-
-	&__description {}
-
-	// .about-us__subtitle
-
-	&__subtitle {}
-
-	// .about-us__title
-
-	&__title {}
-
-	// .about-us__txt
-
-	&__txt {}
-
-	// .about-us__read-more-link
-
-	&__read-more-link {}
-}
-
-//  -- / about us section -- 
-// store section 
-
-.image-bg img {
-	width: 100%;
-}
-
-.goods-list {
-
-	// .goods-list__item
-
-	&__item {
-		width: 379px;
-		// todo calculate correct width
-		position: relative;
-	}
-
-	// .goods-list__description
-
-	&__description {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		position: absolute;
-		top: 40px;
-	}
-
-	// .goods-list__title
-
-	&__title {
-		font-family: 'Roboto';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 28px;
-		line-height: 1.2;
-
-		text-align: center;
-
-		color: #575445;
-	}
-
-	// .goods-list__txt
-
-	&__txt {
-		font-family: 'Poppins';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 1.4;
-
-		text-align: center;
-
-		color: #575445;
-
-	}
-
-	// .goods-list__link
-
-	&__link {
-		font-family: 'Poppins';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 15px;
-		line-height: 1.4;
-
-		color: #575445;
-
-	}
-}
 
 // -------

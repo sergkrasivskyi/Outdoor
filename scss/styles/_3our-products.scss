@@ -1,0 +1,53 @@
+/*styles for our-products section*/
+
+.our-products {
+
+	// .our-products__decription
+
+	&__decription {
+		text-align: center;
+	}
+
+	// .our-products__subtitle
+
+	&__subtitle {}
+
+	// .our-products__title
+
+	&__title {}
+
+	// .our-products__txt
+
+	&__txt {}
+
+	// .our-products__list
+
+	&__list {}
+}
+
+.products-list {
+
+	// .products-list__item
+
+	&__item {
+		text-align: center;
+	}
+
+	// .products-list__icon
+
+	&__icon {}
+
+	// .products-list__title
+
+	&__title {
+		@include styler($products-list-title-fz, $products-list-title-lh, $products-list-cl);
+		// text-align: center;
+	}
+
+	// .products-list__txt
+
+	&__txt {
+	@include styler($products-list-txt-fz, $products-list-txt-lh, $products-list-cl);
+		// text-align: center;
+	}
+}

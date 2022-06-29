@@ -1,0 +1,9 @@
+/*styles for shop section*/
+.shop__title {
+	@include styler($section-title-fz, $section-title-lh, $section-subtitle-cl);
+}
+
+.shop__subtitle {
+	@include styler($section-subtitle-fz, $section-subtitle-lh, $shop-subtitle-cl);
+	// 
+}

@@ -1,0 +1,29 @@
+/*styles for hero section*/
+.outdoor--hero {
+
+	// .outdoor--hero__image
+
+	&__image {}
+
+	// .outdoor--hero__description
+
+	&__description {}
+
+	// .outdoor--hero__subtitle
+
+	&__subtitle {
+		// @include styler($section-subtitle-fz, $section-subtitle-lh, $section-subtitle-cl);
+	}
+
+	// .outdoor--hero__title
+
+	&__title {
+		@include styler($hero-title-fz, $section-title-lh, $section-title-cl);
+	}
+
+	// .outdoor--hero__txt
+
+	&__txt {
+		@include styler($hero-txt-fz, $hero-txt-lh, $hero-txt-cl);
+	}
+}

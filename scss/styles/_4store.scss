@@ -1,0 +1,69 @@
+/*styles for store section*/
+
+.image-bg img {
+	width: 100%;
+}
+
+.goods-list {
+
+	// .goods-list__item
+
+	&__item {
+		width: 379px;
+		// todo calculate correct width
+		position: relative;
+	}
+
+	// .goods-list__description
+
+	&__description {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		top: 40px;
+	}
+
+	// .goods-list__title
+
+	&__title {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 28px;
+		line-height: 1.2;
+
+		text-align: center;
+
+		color: #575445;
+	}
+
+	// .goods-list__txt
+
+	&__txt {
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.4;
+
+		text-align: center;
+
+		color: #575445;
+
+	}
+
+	// .goods-list__link
+
+	&__link {
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 1.4;
+
+		color: #575445;
+
+	}
+}

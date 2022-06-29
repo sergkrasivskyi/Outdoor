@@ -71,37 +71,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------*/
-.menu__link {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 1.08;
-  color: #444444;
-}
-
-.cart-menu__purchase-btn {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-  background-color: #575445;
-  color: #FFFFFF;
-}
-.cart-menu__cart-btn {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-  background-color: #575445;
-  color: #FFFFFF;
-}
-
+/*  variables */
+/* common font-sizes */
+/* common colors */
+/* common line heights*/
+/* header*/
+/* hero */
+/*about us */
+/* shop */
+/* our-products */
+/* mixins definition*/
+/* common classes styles*/
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #E5E5E5;
+  font-size: 16px;
 }
 
 .none {
@@ -122,6 +105,95 @@ body {
   margin: -1px;
 }
 
+.wrapper {
+  max-width: 1140px;
+}
+
+.container {
+  padding: 0 9.44%;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #575445;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #E6B939;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-txt {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #575445;
+}
+
+/*------- styles for header -----*/
+.header--outdoor {
+  font-family: "Poppins";
+  display: flex;
+}
+
+.menu__list {
+  display: flex;
+}
+.menu__link {
+  font-size: 14px;
+  line-height: 1.08;
+  color: #444444;
+}
+
+.cart-menu__purchase-btn, .cart-menu__cart-btn {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #ffffff;
+  background-color: #575445;
+  border-radius: 6px;
+}
+
+/*styles for hero section*/
+.outdoor--hero__title {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #575445;
+}
+.outdoor--hero__txt {
+  font-size: 17px;
+  line-height: 1.48;
+  color: #CACCD1;
+}
+
+/*styles for about-us section*/
+.about-us__link {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #575445;
+}
+
+/*styles for our-products section*/
+.our-products__decription {
+  text-align: center;
+}
+.products-list__item {
+  text-align: center;
+}
+.products-list__title {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #575445;
+}
+.products-list__txt {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #575445;
+}
+
+/*styles for store section*/
 .image-bg img {
   width: 100%;
 }
@@ -164,3 +236,21 @@ body {
   line-height: 1.4;
   color: #575445;
 }
+
+/*styles for drone-view section*/
+/*styles for shop section*/
+.shop__title {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #E6B939;
+}
+
+.shop__subtitle {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #FAFAFC;
+}
+
+/*styles for buyers-guide section*/
+/*styles for magazine section*/
+/*styles for footer section*/

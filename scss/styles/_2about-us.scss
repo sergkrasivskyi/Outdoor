@@ -1,0 +1,28 @@
+/*styles for about-us section*/
+.about-us {
+
+	// .about-us__img
+
+	&__img {}
+
+	// .about-us__description
+
+	&__description {}
+
+	// .about-us__subtitle
+
+	&__subtitle {}
+
+	// .about-us__title
+
+	&__title {}
+
+	// .about-us__txt
+
+	&__txt {}
+
+	// .about-us__read-more-link
+	&__link {
+		@include styler($about-us-link-fz, $about-us-link-lh, $about-us-link-cl);
+	}
+}
