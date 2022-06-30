@@ -1,14 +1,27 @@
 /*styles for store section*/
+.image-bg {
+	max-width: 100%;
+
+}
+
 .image-bg img {
 	width: 100%;
+	border-radius: 12px;
 }
 
 .store {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	row-gap: 20px;
+	margin-top: 100px;
+	margin-bottom: 100px;
 
 	// .store__description
 
 	&__description {
 		text-align: center;
+		max-width: 600px;
 	}
 
 	// .store__subtitle
@@ -18,12 +31,14 @@
 	// .store__title
 
 	&__title {
-		
+		margin-top: 7px;
 	}
 
 	// .store__txt
 
-	&__txt {}
+	&__txt {
+		margin-top: 7px;
+	}
 
 	// .store__goods-list
 
@@ -32,68 +47,59 @@
 	// .store__link
 
 	&__link {}
+	&__link-arrow {
+		margin-left: 4px;
+		fill: $store-link-cl;
+	}
+		
 }
 
 .goods-list {
 
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+
 	// .goods-list__item
 
 	&__item {
-		width: 379px;
-		// todo calculate correct width
+		// width: 379px;
+		flex: 0 1 32.3%;
 		position: relative;
 	}
 
 	// .goods-list__description
 
 	&__description {
-		width: 100%;
+		max-width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 10px;
 		position: absolute;
 		top: 40px;
+		text-align: center;
+		padding: 0 63px;
 	}
 
 	// .goods-list__title
 
 	&__title {
 		font-family: 'Roboto';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 28px;
-		line-height: 1.2;
-
-		text-align: center;
-
-		color: #575445;
+		@include styler($store-title-fz, $store-title-lh, $store-title-cl);
 	}
 
 	// .goods-list__txt
 
 	&__txt {
-		font-family: 'Poppins';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 1.4;
-
-		text-align: center;
-
-		color: #575445;
-
+		@include styler($store-txt-fz, $store-txt-lh, $store-txt-cl);
 	}
 
 	// .goods-list__link
 
 	&__link {
-		font-family: 'Poppins';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 15px;
-		line-height: 1.4;
-
-		color: #575445;
+		margin-top: 10px;
+		@include styler($store-link-fz, $store-link-lh, $store-link-cl);
 
 	}
 }

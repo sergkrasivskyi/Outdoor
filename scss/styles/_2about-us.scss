@@ -1,5 +1,6 @@
 /*styles for about-us section*/
 .about-us {
+	margin: 100px auto;
 	display: flex;
 	align-items: center;
 	justify-content: start;
@@ -9,6 +10,21 @@
 
 	&__img {
 		flex: 0 0 auto;
+		position: relative;
+	}
+
+	//about-us__img-tr
+	&__img-tr {
+		position: absolute;
+		top: -127px;
+		right: -125px;
+	}
+
+	// about-us__img-bl
+	&__img-bl {
+		position: absolute;
+			bottom: -127px;
+			left: -125px;
 	}
 
 	// .about-us__description

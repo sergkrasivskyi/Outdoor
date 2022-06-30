@@ -37,7 +37,7 @@ $hero-txt-fz: 17px;
 $hero-txt-lh: 1.48;
 $hero-txt-cl: #CACCD1;
 /*about us */
-$about-us-link-fz:  15px;
+$about-us-link-fz: 15px;
 $about-us-link-lh: 1.4;
 $about-us-link-cl: #575445;
 
@@ -47,9 +47,20 @@ $shop-subtitle-cl: #FAFAFC;
 $products-list-title-fz: 20px;
 $products-list-title-lh: 1.2;
 $products-list-txt-fz: 14px;
-$products-list-txt-lh: 1.4;  
+$products-list-txt-lh: 1.4;
 $products-list-cl: #575445;
+$products-section-background-cl: #FAFAFC;
 
+/* store section */
+$store-title-fz: 28px;
+$store-title-lh: 1.2;
+$store-title-cl: #575445;
+$store-txt-fz: 16px;
+$store-txt-lh: 1.4;
+$store-txt-cl: #575445;
+$store-link-fz: 15px;
+$store-link-lh: 1.4;
+$store-link-cl: #575445;
 
 // todo подивитись документацію по scss sass -  додати функції, міксини т.д.
 /* mixins definition*/
@@ -58,6 +69,7 @@ $products-list-cl: #575445;
 	line-height: $lh;
 	color: $cl;
 }
+
 @mixin styler-btn($fz, $lh, $cl, $bg, $br) {
 	font-size: $fz;
 	line-height: $lh;
@@ -65,6 +77,7 @@ $products-list-cl: #575445;
 	background-color: $bg;
 	border-radius: $br;
 }
+
 /* common classes styles*/
 body {
 	max-width: 1440px;
@@ -73,6 +86,7 @@ body {
 	font-size: $main-fz;
 	margin: 0 auto;
 }
+
 .none {
 	display: none;
 }
@@ -90,10 +104,12 @@ body {
 	clip-path: inset(50%);
 	margin: -1px;
 }
+
 .wrapper {
-	
+
 	max-width: 100%;
 }
+
 .container {
 	padding: 0 9.44%;
 	max-width: 100%;
@@ -103,11 +119,13 @@ body {
 	@include styler($section-title-fz, $section-title-lh, $section-title-cl);
 	font-family: 'Roboto', sans-serif;
 }
+
 .section-subtitle {
 	@include styler($section-subtitle-fz, $section-subtitle-lh, $section-subtitle-cl);
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
+
 .section-txt {
 	@include styler($section-txt-fz, $section-txt-lh, $section-txt-cl);
 }

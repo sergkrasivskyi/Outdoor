@@ -1,4 +1,9 @@
 /*styles for drone-view section*/
-.drone-view img {
-	max-width: 100%;
+.drone-view {
+	&__bg {
+		max-width: 1440px;
+		width: 100vw;
+		min-height: 400px;
+	}
+
 }

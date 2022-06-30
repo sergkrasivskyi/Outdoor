@@ -1,17 +1,32 @@
 /*styles for hero section*/
 .outdoor--hero {
-position: relative;
+	position: relative;
+
+	// background-image: url('/images/1hero-section/hero-bg.jpg');
+	// height: 60vh;
+	// min-height: 400px;
+
+	// /* Center and scale the image nicely */
+	// background-position: center;
+	// background-repeat: no-repeat;
+	// background-size: cover;
+
 	// .outdoor--hero__image
+	&__image {}
 
 	&__image img {
-		max-width: 100%;
+		vertical-align: middle;
+
+		max-width: 1440px;
+		width: 100vw;
+		min-height: 400px;
 	}
 
 	// .outdoor--hero__description
 
 	&__description {
 		position: absolute;
-		left: 9.44%; 
+		left: 9.44%;
 		top: 34%;
 	}
 
