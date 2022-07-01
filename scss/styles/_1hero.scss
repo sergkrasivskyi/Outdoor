@@ -39,6 +39,7 @@
 	// .outdoor--hero__title
 
 	&__title {
+		font-family: 'Roboto', sans-serif;
 		@include styler($hero-title-fz, $section-title-lh, $hero-title-cl);
 	}
 

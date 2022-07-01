@@ -4,33 +4,48 @@
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
-	gap: 3.4%;
+	@include adaptive-property('gap', 40, 10, 1);
+	// gap: 3.4%;
 	// 40px;
 	margin: 17px 0;
-	
+
 }
 
 .header--logo {
 	// $logo-width: ;
-	flex: 0 0 128px;
+	flex: 0 0 auto;
+	// flex-grow: 0;
+	// flex-shrink: 0;
+	// @include adaptive-property('flex-basis', 128, 100, 1);
 	// 128px
 	align-self: center;
 }
 
+.header--logo svg {
+	@include adaptive-property('width', 128, 100, 1);
+}
+
 .header--menu {
- 
-	flex: 1 0 460px;
-	// 460px;
+
+	// flex: 1 0 460px;
+	// 460px; to 300px
+	flex-grow: 1;
+	flex-shrink: 1;
+	@include adaptive-property('flex-basis', 460, 300, 1);
 	justify-content: end;
 }
 
 .header--cart-menu {
-	
-	flex: 0 0 288px;
-	// 25% - 288px;
+
+	// flex: 0 0 288px;
+	// 25% - 288px; to 150px
+	flex-grow: 0;
+	flex-shrink: 0;
+	@include adaptive-property('flex-basis', 288, 150, 1);
 
 	display: flex;
-	column-gap: 20px;
+	// column-gap: 20px; to 10px
+	@include adaptive-property('column-gap', 20, 10, 1);
 	justify-content: flex-end;
 }
 
@@ -40,7 +55,8 @@
 	&__list {
 		display: flex;
 		justify-content: end;
-		column-gap: 28px;
+		// column-gap: 28px; to 10px 
+		@include adaptive-property('column-gap', 28, 10, 1);
 	}
 
 	// .menu__item
@@ -54,7 +70,16 @@
 
 .cart-menu {
 
+	&__purchase-btn {
+		// flex: 0 0 143px;
+		flex-grow: 0;
+		flex-shrink: 1;
+		@include adaptive-property('flex-basis', 143, 110, 1);
+
+	}
+
 	&__cart-btn {
+		flex: 0 0 auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -82,7 +107,15 @@
 	&__purchase-btn,
 	&__cart-btn {
 		@include styler-btn($header-btn-fz, $header-btn-lh, $header-btn-cl, $header-btn-bg-cl, $header-btn-br);
-		padding: 10px 18px;
+		// fz 16->12 
+		@include adaptive-property('font-size', 16, 12, 1);
+		// padding: 10px 18px;
+		@include adaptive-property('padding-top', 10, 5, 1);
+		@include adaptive-property('padding-bottom', 10, 5, 1);
+		@include adaptive-property('padding-left', 18, 5, 1);
+		@include adaptive-property('padding-right', 18, 5, 1);
+		// line-height: 1.4 -> 1
+		@include adaptive-property('line-height', 1.4, 1.1, 1);
 		// 
 	}
 

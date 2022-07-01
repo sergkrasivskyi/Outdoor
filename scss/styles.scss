@@ -1,6 +1,62 @@
 @import './styles/_nullstyle';
 
 // todo: create favicon
+
+
+/* adaptive-property for different properties */
+/* values for adaptive  property */
+// 
+$maxWidth: 1440;
+$maxWidthContainer: 1168;
+$screen-сoefficient: calc((100vw - 320px)/(1440 - 320));
+$padding-container: calc(50px + (136 - 50) * $screen-сoefficient);
+
+/* mixins definition*/
+
+@mixin adaptive-property ($property, $originValue, $minValue, $type) {
+	$addSize: $originValue - $minValue;
+
+	@if type==1 {
+		// for sizes smaller than the container sizes
+		#{$property}: $originValue + px;
+
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	}
+
+	@else if $type ==2 {
+		// for sizes bigger than the container sizes
+		#{$property}: $originValue + px;
+
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	}
+
+	@else {
+		//  all times
+		#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+/* styler fox titles, subtitles, txt */
+@mixin styler($fz, $lh, $cl) {
+	font-size: $fz;
+	line-height: $lh;
+	color: $cl;
+}
+
+/* styler fox buttons */
+
+@mixin styler-btn($fz, $lh, $cl, $bg, $br) {
+	font-size: $fz;
+	line-height: $lh;
+	color: $cl;
+	background-color: $bg;
+	border-radius: $br;
+}
+
 /*  variables */
 /* common font-sizes */
 $main-fz: 16px;
@@ -8,6 +64,7 @@ $section-title-fz: 36px;
 $section-subtitle-fz: 14px;
 $section-txt-fz: 16px;
 $arrow-fz: 15px;
+
 /* common colors */
 $section-title-cl: #575445;
 $section-subtitle-cl: #E6B939;
@@ -31,7 +88,9 @@ $header-btn-cl: #ffffff;
 $header-btn-br: 6px;
 
 /* hero */
-$hero-title-fz: 48px;
+$hero-title-fz: calc(30px + (48 - 30) * $screen-сoefficient);
+// 48px;
+
 $hero-title-cl: #FFFFFF;
 $hero-txt-fz: 17px;
 $hero-txt-lh: 1.48;
@@ -62,27 +121,16 @@ $store-link-fz: 15px;
 $store-link-lh: 1.4;
 $store-link-cl: #575445;
 
-// todo подивитись документацію по scss sass -  додати функції, міксини т.д.
-/* mixins definition*/
-@mixin styler($fz, $lh, $cl) {
-	font-size: $fz;
-	line-height: $lh;
-	color: $cl;
-}
 
-@mixin styler-btn($fz, $lh, $cl, $bg, $br) {
-	font-size: $fz;
-	line-height: $lh;
-	color: $cl;
-	background-color: $bg;
-	border-radius: $br;
-}
 
 /* common classes styles*/
+
 body {
-	max-width: 1440px;
 	font-family: 'Poppins', sans-serif;
+	// max-width: 1440px;
+	@include adaptive-property('max-width', 1440, 320, 1);
 	// font-family: 'Roboto', sans-serif;
+	@include adaptive-property('font-size', 16, 12, 1);
 	font-size: $main-fz;
 	margin: 0 auto;
 }
@@ -106,18 +154,24 @@ body {
 }
 
 .wrapper {
-
-	max-width: 100%;
+	// max-width: 100%;
+	@include adaptive-property('max-width', 1440, 320, 1);
 }
 
 .container {
-	padding: 0 9.44%;
-	max-width: 100%;
+	// max-width: 100%;
+	@include adaptive-property('max-width', 1440, 320, 1);
+	@include adaptive-property('max-width', 1440, 320, 2);
+	// padding max - 136px, for example min 50px
+	@include adaptive-property('padding-left', 136, 30, 1);
+	@include adaptive-property('padding-right', 136, 30, 1);
 }
 
 .section-title {
-	@include styler($section-title-fz, $section-title-lh, $section-title-cl);
 	font-family: 'Roboto', sans-serif;
+	@include styler($section-title-fz, $section-title-lh, $section-title-cl);
+	// @include adaptive-property('font-size', 36, 16, 1);
+
 }
 
 .section-subtitle {
