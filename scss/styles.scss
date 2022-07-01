@@ -1,19 +1,18 @@
-@import './styles/_nullstyle';
+@import "./styles/_nullstyle";
 
 // todo: create favicon
 
-
 /* adaptive-property for different properties */
 /* values for adaptive  property */
-// 
+//
 $maxWidth: 1440;
 $maxWidthContainer: 1168;
-$screen-сoefficient: calc((100vw - 320px)/(1440 - 320));
+$screen-сoefficient: calc((100vw - 320px) / (1440 - 320));
 $padding-container: calc(50px + (136 - 50) * $screen-сoefficient);
 
 /* mixins definition*/
 
-@mixin adaptive-property ($property, $originValue, $minValue, $type) {
+@mixin adaptive-property($property, $originValue, $minValue, $type) {
 	$addSize: $originValue - $minValue;
 
 	@if type==1 {
@@ -23,18 +22,14 @@ $padding-container: calc(50px + (136 - 50) * $screen-сoefficient);
 		@media (max-width: #{$maxWidthContainer + px}) {
 			#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
 		}
-	}
-
-	@else if $type ==2 {
+	} @else if $type ==2 {
 		// for sizes bigger than the container sizes
 		#{$property}: $originValue + px;
 
 		@media (min-width: #{$maxWidthContainer + px}) {
 			#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 		}
-	}
-
-	@else {
+	} @else {
 		//  all times
 		#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 	}
@@ -67,7 +62,7 @@ $arrow-fz: 15px;
 
 /* common colors */
 $section-title-cl: #575445;
-$section-subtitle-cl: #E6B939;
+$section-subtitle-cl: #e6b939;
 $section-txt-cl: #575445;
 
 /* common line heights*/
@@ -91,24 +86,24 @@ $header-btn-br: 6px;
 $hero-title-fz: calc(30px + (48 - 30) * $screen-сoefficient);
 // 48px;
 
-$hero-title-cl: #FFFFFF;
+$hero-title-cl: #ffffff;
 $hero-txt-fz: 17px;
 $hero-txt-lh: 1.48;
-$hero-txt-cl: #CACCD1;
+$hero-txt-cl: #caccd1;
 /*about us */
 $about-us-link-fz: 15px;
 $about-us-link-lh: 1.4;
 $about-us-link-cl: #575445;
 
 /* shop */
-$shop-subtitle-cl: #FAFAFC;
+$shop-subtitle-cl: #fafafc;
 /* our-products  */
 $products-list-title-fz: 20px;
 $products-list-title-lh: 1.2;
 $products-list-txt-fz: 14px;
 $products-list-txt-lh: 1.4;
 $products-list-cl: #575445;
-$products-section-background-cl: #FAFAFC;
+$products-section-background-cl: #fafafc;
 
 /* store section */
 $store-title-fz: 28px;
@@ -121,16 +116,14 @@ $store-link-fz: 15px;
 $store-link-lh: 1.4;
 $store-link-cl: #575445;
 
-
-
 /* common classes styles*/
 
 body {
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	// max-width: 1440px;
-	@include adaptive-property('max-width', 1440, 320, 1);
+	@include adaptive-property("max-width", 1440, 320, 1);
 	// font-family: 'Roboto', sans-serif;
-	@include adaptive-property('font-size', 16, 12, 1);
+	@include adaptive-property("font-size", 16, 12, 1);
 	font-size: $main-fz;
 	margin: 0 auto;
 }
@@ -155,23 +148,22 @@ body {
 
 .wrapper {
 	// max-width: 100%;
-	@include adaptive-property('max-width', 1440, 320, 1);
+	@include adaptive-property("max-width", 1440, 320, 1);
 }
 
 .container {
 	// max-width: 100%;
-	@include adaptive-property('max-width', 1440, 320, 1);
-	@include adaptive-property('max-width', 1440, 320, 2);
+	@include adaptive-property("max-width", 1440, 320, 1);
+	@include adaptive-property("max-width", 1440, 320, 2);
 	// padding max - 136px, for example min 50px
-	@include adaptive-property('padding-left', 136, 30, 1);
-	@include adaptive-property('padding-right', 136, 30, 1);
+	@include adaptive-property("padding-left", 136, 30, 1);
+	@include adaptive-property("padding-right", 136, 30, 1);
 }
 
 .section-title {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	@include styler($section-title-fz, $section-title-lh, $section-title-cl);
 	// @include adaptive-property('font-size', 36, 16, 1);
-
 }
 
 .section-subtitle {
@@ -184,24 +176,23 @@ body {
 	@include styler($section-txt-fz, $section-txt-lh, $section-txt-cl);
 }
 
-
 //  header styles
-@import './styles/_0header';
+@import "./styles/_0header";
 // hero styles
-@import './styles/_1hero';
+@import "./styles/_1hero";
 // about us styles
-@import './styles/_2about-us';
+@import "./styles/_2about-us";
 // our products styles
-@import './styles/_3our-products';
+@import "./styles/_3our-products";
 // store section	styles
-@import './styles/_4store';
+@import "./styles/_4store";
 // drone views styles
-@import './styles/_5drone-view';
+@import "./styles/_5drone-view";
 // shop styles
-@import './styles/_6shop';
+@import "./styles/_6shop";
 // buyers guide styles
-@import './styles/_7buyers-guide';
+@import "./styles/_7buyers-guide";
 // magazines styles
-@import './styles/_8magazine';
+@import "./styles/_8magazine";
 // footer styles
-@import './styles/_footer';
+@import "./styles/_footer";

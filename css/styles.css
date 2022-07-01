@@ -139,7 +139,7 @@ body {
 .section-subtitle {
   font-size: 14px;
   line-height: 1.4;
-  color: #E6B939;
+  color: #e6b939;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -173,7 +173,6 @@ body {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: calc(300px + 160 * ((100vw - 320px) / 1120));
-  justify-content: end;
 }
 
 .header--cart-menu {
@@ -188,6 +187,7 @@ body {
 
 .menu__list {
   display: flex;
+  justify-content: flex-end;
   justify-content: end;
   -moz-column-gap: calc(10px + 18 * ((100vw - 320px) / 1120));
        column-gap: calc(10px + 18 * ((100vw - 320px) / 1120));
@@ -200,8 +200,8 @@ body {
 
 .cart-menu__purchase-btn {
   flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: calc(110px + 33 * ((100vw - 320px) / 1120));
+  flex-shrink: 0;
+  flex-basis: auto;
 }
 .cart-menu__cart-btn {
   flex: 0 0 auto;
@@ -259,12 +259,12 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: calc(30px + 18 * (100vw - 320px) / 1120);
   line-height: 1.2;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .outdoor--hero__txt {
   font-size: 17px;
   line-height: 1.48;
-  color: #CACCD1;
+  color: #caccd1;
 }
 
 /*styles for about-us section*/
@@ -307,7 +307,7 @@ body {
 
 /*styles for our-products section*/
 .our-products__section-wrapper {
-  background-color: #FAFAFC;
+  background-color: #fafafc;
   padding: 100px 0;
 }
 
@@ -451,23 +451,80 @@ body {
 }
 
 /*styles for drone-view section*/
+.advertising-n-shop {
+  max-width: 1440px;
+  width: 100vw;
+  min-height: 400px;
+}
+
+.drone-view {
+  position: relative;
+}
 .drone-view__bg {
   max-width: 1440px;
   width: 100vw;
   min-height: 400px;
+}
+.drone-view__description {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  margin-right: 30px;
+  max-width: 280px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fafafc;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.drone-view__title {
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.drone-view__link {
+  font-size: 15px;
+  color: #ffffff;
+}
+.drone-view__advertising {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.advertising {
+  max-width: 615px;
+  font-size: 12px;
+  line-height: 1;
+  color: #ffffff;
+  background: #292c32;
+  border-radius: 16px;
+  padding: 16px 22px;
+}
+.advertising__list {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.advertising__item svg {
+  margin-right: 5px;
 }
 
 /*styles for shop section*/
 .shop__title {
   font-size: 36px;
   line-height: 1.2;
-  color: #E6B939;
+  color: #e6b939;
 }
 
 .shop__subtitle {
   font-size: 14px;
   line-height: 1.4;
-  color: #FAFAFC;
+  color: #fafafc;
 }
 
 /*styles for buyers-guide section*/

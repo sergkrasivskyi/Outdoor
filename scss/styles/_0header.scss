@@ -1,14 +1,13 @@
 /*------- styles for header -----*/
 .header--outdoor {
-	font-family: 'Poppins';
+	font-family: "Poppins";
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
-	@include adaptive-property('gap', 40, 10, 1);
+	@include adaptive-property("gap", 40, 10, 1);
 	// gap: 3.4%;
 	// 40px;
 	margin: 17px 0;
-
 }
 
 .header--logo {
@@ -22,60 +21,57 @@
 }
 
 .header--logo svg {
-	@include adaptive-property('width', 128, 100, 1);
+	@include adaptive-property("width", 128, 100, 1);
 }
 
 .header--menu {
-
 	// flex: 1 0 460px;
 	// 460px; to 300px
 	flex-grow: 1;
 	flex-shrink: 1;
-	@include adaptive-property('flex-basis', 460, 300, 1);
-	justify-content: end;
+	@include adaptive-property("flex-basis", 460, 300, 1);
 }
 
 .header--cart-menu {
-
 	// flex: 0 0 288px;
 	// 25% - 288px; to 150px
 	flex-grow: 0;
 	flex-shrink: 0;
-	@include adaptive-property('flex-basis', 288, 150, 1);
+	@include adaptive-property("flex-basis", 288, 150, 1);
 
 	display: flex;
 	// column-gap: 20px; to 10px
-	@include adaptive-property('column-gap', 20, 10, 1);
+	@include adaptive-property("column-gap", 20, 10, 1);
 	justify-content: flex-end;
 }
 
 .menu {
-
 	// .menu__list
 	&__list {
 		display: flex;
+		justify-content: flex-end;
 		justify-content: end;
-		// column-gap: 28px; to 10px 
-		@include adaptive-property('column-gap', 28, 10, 1);
+		// column-gap: 28px; to 10px
+		@include adaptive-property("column-gap", 28, 10, 1);
 	}
 
 	// .menu__item
-	&__item {}
+	&__item {
+	}
 
 	// .menu__link
 	&__link {
-		@include styler ($menu-fz, $menu-link-lh, $menu-link-cl);
+		@include styler($menu-fz, $menu-link-lh, $menu-link-cl);
 	}
 }
 
 .cart-menu {
-
 	&__purchase-btn {
 		// flex: 0 0 143px;
 		flex-grow: 0;
-		flex-shrink: 1;
-		@include adaptive-property('flex-basis', 143, 110, 1);
-
+		flex-shrink: 0;
+		flex-basis: auto;
+		// @include adaptive-property("flex-basis", 143, 90, 1);
 	}
 
 	&__cart-btn {
@@ -87,19 +83,19 @@
 	}
 
 	&__cart-btn::before {
-		content: '';
+		content: "";
 		width: 17px;
 		height: 17px;
-		background-image: url('/images/header/cart-icon.svg');
+		background-image: url("/images/header/cart-icon.svg");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
 
 	&__cart-btn::after {
-		content: '';
+		content: "";
 		width: 20px;
 		height: 20px;
-		background-image: url('/images/0header/items-in-cart.svg');
+		background-image: url("/images/0header/items-in-cart.svg");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
@@ -107,17 +103,15 @@
 	&__purchase-btn,
 	&__cart-btn {
 		@include styler-btn($header-btn-fz, $header-btn-lh, $header-btn-cl, $header-btn-bg-cl, $header-btn-br);
-		// fz 16->12 
-		@include adaptive-property('font-size', 16, 12, 1);
+		// fz 16->12
+		@include adaptive-property("font-size", 16, 12, 1);
 		// padding: 10px 18px;
-		@include adaptive-property('padding-top', 10, 5, 1);
-		@include adaptive-property('padding-bottom', 10, 5, 1);
-		@include adaptive-property('padding-left', 18, 5, 1);
-		@include adaptive-property('padding-right', 18, 5, 1);
+		@include adaptive-property("padding-top", 10, 5, 1);
+		@include adaptive-property("padding-bottom", 10, 5, 1);
+		@include adaptive-property("padding-left", 18, 5, 1);
+		@include adaptive-property("padding-right", 18, 5, 1);
 		// line-height: 1.4 -> 1
-		@include adaptive-property('line-height', 1.4, 1.1, 1);
-		// 
+		@include adaptive-property("line-height", 1.4, 1.1, 1);
+		//
 	}
-
-
 }
