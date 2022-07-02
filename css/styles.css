@@ -550,5 +550,77 @@ body {
 }
 
 /*styles for buyers-guide section*/
+.buyers-guide {
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  row-gap: 20px;
+}
+.buyers-guide__description {
+  display: grid;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content;
+  grid-template-columns: calc(400px + 200 * ((100vw - 320px) / 1120));
+  row-gap: 7px;
+}
+.buyers-guide__link {
+  display: inline-block;
+}
+
+.offer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: calc(10px + 22 * ((100vw - 320px) / 1120));
+       column-gap: calc(10px + 22 * ((100vw - 320px) / 1120));
+}
+.offer__item {
+  display: grid;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content;
+  row-gap: 12px;
+}
+.offer__img {
+  width: calc(150px + 418 * ((100vw - 320px) / 1120));
+}
+.offer__txt {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #575445;
+}
+.offer__target {
+  display: grid;
+  grid-template-rows: -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: 0.1fr 0.3fr 1fr;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.offer__subimage {
+  grid-row: span 2;
+  grid-column: 1;
+}
+.offer__person {
+  grid-column: 2;
+  font-family: "Roboto";
+  font-size: 13px;
+  line-height: 1.4;
+  color: #575445;
+  margin-bottom: -10px;
+}
+.offer__job-title {
+  grid-column: 2;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #e6b939;
+}
+.offer__date {
+  grid-column: 3;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #6f7278;
+  text-align: end;
+  margin-top: -5px;
+}
+
 /*styles for magazine section*/
 /*styles for footer section*/
