@@ -454,7 +454,6 @@ body {
 .advertising-n-shop {
   max-width: 1440px;
   width: 100vw;
-  min-height: 400px;
 }
 
 .drone-view {
@@ -516,16 +515,44 @@ body {
   gap: 10px;
 }
 /*styles for shop section*/
-.shop__title {
-  font-size: 36px;
-  line-height: 1.2;
-  color: #e6b939;
+.shop {
+  background: #375c58 center url("./../../images/6shop-section/pattern-bg.svg") repeat;
+  padding-top: calc(10px + 90 * ((100vw - 320px) / 1120));
+  padding-bottom: calc(10px + 90 * ((100vw - 320px) / 1120));
 }
-
+.shop__description {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 600px;
+  width: calc(200px + 400 * ((100vw - 320px) / 1120));
+}
 .shop__subtitle {
   font-size: 14px;
   line-height: 1.4;
   color: #fafafc;
+  font-size: calc(9px + 5 * ((100vw - 320px) / 1120));
+}
+.shop__title {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #e6b939;
+  font-family: "Roboto";
+  font-size: calc(16px + 20 * ((100vw - 320px) / 1120));
+}
+.shop__txt {
+  color: #fafafc;
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1120));
+}
+.shop__link {
+  display: inline-block;
+  margin-top: calc(10px + 10 * ((100vw - 320px) / 1120));
+  padding: calc(5px + 5 * ((100vw - 320px) / 1120));
+  font-size: calc(9px + 6 * ((100vw - 320px) / 1120));
+  line-height: 1.49;
+  text-align: center;
+  color: #575445;
+  background: #ffffff;
+  border-radius: 6px;
 }
 
 /*styles for buyers-guide section*/
