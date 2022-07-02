@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 /* common classes styles*/
 body {
   font-family: "Poppins", sans-serif;
-  max-width: calc(320px + 1120 * ((100vw - 320px) / 1120));
+  max-width: 1440px;
   font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
   font-size: 16px;
   margin: 0 auto;
@@ -118,15 +118,9 @@ body {
 }
 
 .container {
-  max-width: calc(320px + 1120 * ((100vw - 320px) / 1120));
-  max-width: 1440px;
   padding-left: calc(30px + 106 * ((100vw - 320px) / 1120));
   padding-right: calc(30px + 106 * ((100vw - 320px) / 1120));
-}
-@media (min-width: 1168px) {
-  .container {
-    max-width: calc(320px + 1120 * ((100vw - 320px) / 1120));
-  }
+  margin: 0 auto;
 }
 
 .section-title {

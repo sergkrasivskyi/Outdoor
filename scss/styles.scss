@@ -30,7 +30,7 @@ $padding-container: calc(50px + (136 - 50) * $screen-сoefficient);
 			#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 		}
 	} @else {
-		//  all times
+		//  all other times
 		#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 	}
 }
@@ -120,8 +120,8 @@ $store-link-cl: #575445;
 
 body {
 	font-family: "Poppins", sans-serif;
-	// max-width: 1440px;
-	@include adaptive-property("max-width", 1440, 320, 1);
+	max-width: 1440px;
+	// @include adaptive-property("max-width", 1440, 320, 1);
 	// font-family: 'Roboto', sans-serif;
 	@include adaptive-property("font-size", 16, 12, 1);
 	font-size: $main-fz;
@@ -153,11 +153,12 @@ body {
 
 .container {
 	// max-width: 100%;
-	@include adaptive-property("max-width", 1440, 320, 1);
-	@include adaptive-property("max-width", 1440, 320, 2);
+	// @include adaptive-property("max-width", 1440, 320, 1);
+	// @include adaptive-property("max-width", 1440, 320, 2);
 	// padding max - 136px, for example min 50px
 	@include adaptive-property("padding-left", 136, 30, 1);
 	@include adaptive-property("padding-right", 136, 30, 1);
+	margin: 0 auto;
 }
 
 .section-title {
