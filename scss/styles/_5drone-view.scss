@@ -5,12 +5,18 @@
 	min-height: 400px;
 }
 .drone-view {
-	// .drone-view__bg
+	img {
+
+	}
 	position: relative;
+	// .drone-view__bg
+
 	&__bg {
 		max-width: 1440px;
-		width: 100vw;
-		min-height: 400px;
+		width: 100%;
+		overflow: hidden;
+		aspect-ratio: 12/5;
+		// min-height: 400px;
 	}
 
 	// .drone-view__description
@@ -84,8 +90,9 @@
 	// .advertising__item
 
 	&__item {
+		display: flex;
+		gap: 10px;
 	}
 	&__item svg {
-		margin-right: 5px;
 	}
 }

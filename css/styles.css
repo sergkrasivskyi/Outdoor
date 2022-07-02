@@ -462,8 +462,9 @@ body {
 }
 .drone-view__bg {
   max-width: 1440px;
-  width: 100vw;
-  min-height: 400px;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 12/5;
 }
 .drone-view__description {
   position: absolute;
@@ -510,10 +511,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-.advertising__item svg {
-  margin-right: 5px;
+.advertising__item {
+  display: flex;
+  gap: 10px;
 }
-
 /*styles for shop section*/
 .shop__title {
   font-size: 36px;
