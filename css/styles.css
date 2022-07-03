@@ -555,7 +555,7 @@ body {
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   row-gap: 20px;
-  margin-bottom: 200px;
+  margin: 100px auto 200px;
 }
 .buyers-guide__description {
   display: grid;
