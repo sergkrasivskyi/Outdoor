@@ -555,6 +555,7 @@ body {
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   row-gap: 20px;
+  margin-bottom: 200px;
 }
 .buyers-guide__description {
   display: grid;
@@ -565,6 +566,10 @@ body {
 }
 .buyers-guide__link {
   display: inline-block;
+  margin: 0 auto;
+}
+.buyers-guide__link svg {
+  margin-left: 4px;
 }
 
 .offer {
@@ -605,7 +610,7 @@ body {
   font-size: 13px;
   line-height: 1.4;
   color: #575445;
-  margin-bottom: -10px;
+  transform: translateY(10px);
 }
 .offer__job-title {
   grid-column: 2;
@@ -619,8 +624,98 @@ body {
   line-height: 1.4;
   color: #6f7278;
   text-align: end;
-  margin-top: -5px;
+  transform: translateY(-5px);
 }
 
 /*styles for magazine section*/
 /*styles for footer section*/
+.footer {
+  background-color: #575445;
+  padding-top: calc(15px + 85 * ((100vw - 320px) / 1120));
+  padding-bottom: calc(15px + 85 * ((100vw - 320px) / 1120));
+}
+.footer__container {
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr 1fr;
+  row-gap: calc(10px + 21 * ((100vw - 320px) / 1120));
+}
+.footer__logo {
+  grid-row: 1;
+  grid-column: span 2;
+  text-align: center;
+}
+.footer__menu-tree {
+  grid-row: 2;
+  grid-column: span 2;
+}
+.footer__reserved-rights {
+  grid-row: 3;
+  grid-column: 1;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+.footer__rights-link {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+.footer__socials {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.menu-tree {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 0.2fr 0.2fr 0.2fr 0.41fr;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.menu-tree__branch p {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e6b939;
+  margin-bottom: 9px;
+}
+.menu-tree__bough {
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: initial;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.menu-tree__leaf--newsletter {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  padding: 7px;
+  padding-left: 21px;
+}
+.menu-tree__email {
+  border-radius: inherit;
+  flex: 1 1 auto;
+}
+.menu-tree__button {
+  flex: 0 0 71px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: capitalize;
+  color: #ffffff;
+  background-color: #575445;
+  border-radius: inherit;
+}
+
+.socials {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}

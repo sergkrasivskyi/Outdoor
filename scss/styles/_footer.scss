@@ -1,1 +1,127 @@
 /*styles for footer section*/
+.footer {
+	background-color: #575445;
+	@include adaptive-property("padding-top", 100, 15, 1);
+	@include adaptive-property("padding-bottom", 100, 15, 1);
+
+	// .footer__container
+
+	&__container {
+		display: grid;
+		grid-template-rows: min-content 1fr min-content;
+		grid-template-columns: 1fr 1fr;
+		@include adaptive-property("row-gap", 31, 10, 1);
+	}
+
+	// .footer__logo
+
+	&__logo {
+		grid-row: 1;
+		grid-column: span 2;
+		text-align: center;
+	}
+
+	// .footer__menu-tree
+
+	&__menu-tree {
+		grid-row: 2;
+		grid-column: span 2;
+	}
+
+	// .footer__reserved-rights
+
+	&__reserved-rights {
+		grid-row: 3;
+		grid-column: 1;
+		font-size: 14px;
+		line-height: 1.4;
+		color: #ffffff;
+	}
+
+	// .footer__rights-link
+
+	&__rights-link {
+		font-size: 14px;
+		line-height: 1.4;
+		color: #ffffff;
+	}
+
+	// .footer__socials
+
+	&__socials {
+		grid-row: 3;
+		grid-column: 2;
+	}
+}
+
+.menu-tree {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 0.2fr 0.2fr 0.2fr 0.41fr;
+	column-gap: 16px;
+	// .menu-tree__branch
+
+	&__branch {
+	}
+	&__branch p {
+		font-size: 14px;
+		line-height: 1.4;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #e6b939;
+		margin-bottom: 9px;
+	}
+	// .menu-tree__bough
+
+	&__bough {
+		font-size: 14px;
+		line-height: 1.4;
+		text-transform: initial;
+		color: #ffffff;
+
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+	}
+
+	// .menu-tree__leaf
+
+	&__leaf {
+	}
+	&__leaf--newsletter {
+		background: #f9fafb;
+		border: 1px solid #e5e7eb;
+		border-radius: 8px;
+		display: flex;
+		padding: 7px;
+		padding-left: 21px;
+	}
+	// .menu-tree__email
+
+	&__email {
+		border-radius: inherit;
+		flex: 1 1 auto;
+	}
+
+	// .menu-tree__button
+
+	&__button {
+		flex: 0 0 71px;
+		padding: 10px;
+		font-size: 14px;
+		line-height: 1.4;
+		text-transform: capitalize;
+		color: #ffffff;
+		background-color: #575445;
+		border-radius: inherit;
+	}
+}
+.socials {
+	display: flex;
+	justify-content: end;
+	gap: 20px;
+	// .socials__link
+
+	&__link {
+	}
+}
