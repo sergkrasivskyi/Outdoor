@@ -8,7 +8,7 @@
 
 	&__container {
 		display: grid;
-		grid-template-rows: min-content 1fr min-content;
+		grid-template-rows: min-content min-content 1fr min-content;
 		grid-template-columns: 1fr 1fr;
 		@include adaptive-property("row-gap", 31, 10, 1);
 	}
@@ -24,14 +24,14 @@
 	// .footer__menu-tree
 
 	&__menu-tree {
-		grid-row: 2;
+		grid-row: 3;
 		grid-column: span 2;
 	}
 
 	// .footer__reserved-rights
 
 	&__reserved-rights {
-		grid-row: 3;
+		grid-row: 4;
 		grid-column: 1;
 		font-size: 14px;
 		line-height: 1.4;
@@ -49,7 +49,7 @@
 	// .footer__socials
 
 	&__socials {
-		grid-row: 3;
+		grid-row: 4;
 		grid-column: 2;
 	}
 }

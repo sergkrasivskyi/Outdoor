@@ -1,1 +1,62 @@
 /*styles for magazine section*/
+
+.magazine {
+	margin: 100px auto;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	column-gap: 104px;
+
+	// .magazine__img
+
+	&__img {
+		position: relative;
+	}
+
+	// .magazine__img-tr
+
+	&__img-tr {
+		position: absolute;
+		top: -127px;
+		right: -125px;
+		z-index: -1;
+	}
+
+	// .magazine__img--main
+
+	&__img--main {
+	}
+
+	// .magazine__img-bl
+
+	&__img-bl {
+		position: absolute;
+		bottom: -127px;
+		left: -125px;
+	}
+
+	// .magazine__description
+
+	&__description {
+	}
+
+	// .magazine__subtitle
+
+	&__subtitle {
+	}
+
+	// .magazine__title
+
+	&__title {
+	}
+
+	// .magazine__txt
+
+	&__txt {
+	}
+
+	// .magazine__link
+
+	&__link {
+	}
+}
