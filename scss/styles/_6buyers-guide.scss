@@ -14,7 +14,7 @@
 		display: grid;
 		grid-template-rows: min-content min-content min-content;
 		@include adaptive-property("grid-template-columns", 600, 400, 1);
-		
+
 		// grid-template-columns: 50%;
 		row-gap: 7px;
 		// grid-template-columns: min-content 1fr;
@@ -60,25 +60,33 @@
 
 .offer {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: min-content min-content;
+	// column-gap: 32px;
+	@include adaptive-property("column-gap", 32, 10, 1);
+		// @include adaptive-property("grid-template-column", , 10, 1);
 	// by default the column-gap: 32px;
 	// do it by adaptive
-	@include adaptive-property("column-gap", 32, 10, 1);
+	// @include adaptive-property("column-gap", 32, 10, 1);
 
 	// .offer__item
 
 	&__item {
 		display: grid;
 		grid-template-rows: min-content min-content min-content;
+		grid-template-columns: min-content;
 		row-gap: 12px;
 	}
 
 	// .offer__img
 
 	&__img {
+		// display: block;
+		
+		// max-width: 568px;
+	}
+	&__img img {
 		@include adaptive-property("width", 568, 150, 1);
 	}
-
 	// .offer__txt
 
 	&__txt {
@@ -92,7 +100,7 @@
 	&__target {
 		display: grid;
 		grid-template-rows: min-content min-content;
-		grid-template-columns: 0.1fr 0.3fr 1fr;
+		grid-template-columns: 0.1fr 0.2fr 0.7fr;
 		column-gap: 5px;
 	}
 

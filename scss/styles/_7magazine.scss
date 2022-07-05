@@ -5,7 +5,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: start;
-	column-gap: 104px;
+	// column-gap: 104px;
+	@include adaptive-property("column-gap", 104, 30, 1);
 
 	// .magazine__img
 
@@ -25,6 +26,7 @@
 	// .magazine__img--main
 
 	&__img--main {
+		@include adaptive-property("width", 576, 300, 1);
 	}
 
 	// .magazine__img-bl

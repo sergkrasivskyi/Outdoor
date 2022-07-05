@@ -83,19 +83,17 @@
 	}
 
 	&__cart-btn::before {
-		content: "";
+		content: url('/images/header/cart-icon.svg');
 		width: 17px;
 		height: 17px;
-		background-image: url("/images/header/cart-icon.svg");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
 
 	&__cart-btn::after {
-		content: "";
+		content: url("/images/0header/items-in-cart.svg");
 		width: 20px;
 		height: 20px;
-		background-image: url("/images/0header/items-in-cart.svg");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}

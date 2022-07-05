@@ -1,11 +1,13 @@
 /*styles for store section*/
 .image-bg {
-	max-width: 100%;
+	@include adaptive-property("width", 379, 50, 1);
 
+	// max-width: 100%;
 }
 
 .image-bg img {
-	width: 100%;
+	// max-width: 100%;
+	@include adaptive-property("width", 379, 110 , 1);
 	border-radius: 12px;
 }
 
@@ -26,7 +28,8 @@
 
 	// .store__subtitle
 
-	&__subtitle {}
+	&__subtitle {
+	}
 
 	// .store__title
 
@@ -42,29 +45,33 @@
 
 	// .store__goods-list
 
-	&__goods-list {}
+	&__goods-list {
+	}
 
 	// .store__link
 
-	&__link {}
+	&__link {
+	}
 	&__link-arrow {
 		margin-left: 4px;
 		fill: $store-link-cl;
 	}
-		
 }
 
 .goods-list {
-
 	display: flex;
 	flex-wrap: wrap;
-	gap: 16px;
+	// gap: 16px;
+	@include adaptive-property("gap", 15, 5, 1);
 
 	// .goods-list__item
 
 	&__item {
 		// width: 379px;
-		flex: 0 1 32.3%;
+		// flex: 0 1 32.3%;
+		flex-grow: 0;
+		flex-shrink: 1;
+		@include adaptive-property("flex-basis", 379, 90, 1);
 		position: relative;
 	}
 
@@ -79,13 +86,15 @@
 		position: absolute;
 		top: 40px;
 		text-align: center;
-		padding: 0 63px;
+		// padding: 0 63px;
+		@include adaptive-property("padding-left", 63, 0, 1);
+		@include adaptive-property("padding-right", 63, 0, 1);
 	}
 
 	// .goods-list__title
 
 	&__title {
-		font-family: 'Roboto';
+		font-family: "Roboto";
 		@include styler($store-title-fz, $store-title-lh, $store-title-cl);
 	}
 
@@ -100,6 +109,5 @@
 	&__link {
 		margin-top: 10px;
 		@include styler($store-link-fz, $store-link-lh, $store-link-cl);
-
 	}
 }
