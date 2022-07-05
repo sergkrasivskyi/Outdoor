@@ -217,18 +217,14 @@ body {
   gap: 8px;
 }
 .cart-menu__cart-btn::before {
-  content: url("/images/header/cart-icon.svg");
+  content: url("./images/header/cart-icon.svg");
   width: 17px;
   height: 17px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .cart-menu__cart-btn::after {
-  content: url("/images/0header/items-in-cart.svg");
+  content: url("./images/0header/items-in-cart.svg");
   width: 20px;
   height: 20px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .cart-menu__purchase-btn, .cart-menu__cart-btn {
   font-size: 16px;
