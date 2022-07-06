@@ -74,11 +74,6 @@
 	// .menu-tree__bough
 
 	&__bough {
-		font-size: 14px;
-		line-height: 1.4;
-		text-transform: initial;
-		color: #ffffff;
-
 		display: flex;
 		flex-direction: column;
 		gap: 9px;
@@ -86,7 +81,11 @@
 
 	// .menu-tree__leaf
 
-	&__leaf {
+	&__leaf, &__leaf > a {
+		font-size: 14px;
+		line-height: 1.4;
+		text-transform: initial;
+		color: #ffffff;
 	}
 	&__leaf--newsletter {
 		background: #f9fafb;

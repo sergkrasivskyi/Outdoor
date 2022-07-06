@@ -87,6 +87,10 @@ h1, h2, h3, h4, h5, h6 {
 /* our-products  */
 /* store section */
 /* common classes styles*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   max-width: 1440px;
@@ -120,10 +124,7 @@ body {
 }
 
 .container {
-  padding-left: 136px;
-  padding-left: calc(0px + 136 * ((100vw - 320px) / 1120));
-  padding-right: 136px;
-  padding-right: calc(0px + 136 * ((100vw - 320px) / 1120));
+  padding: 0 136px;
   margin: 0 auto;
 }
 
@@ -170,10 +171,7 @@ body {
 }
 
 .header--menu {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 460px;
-  flex-basis: calc(300px + 160 * ((100vw - 320px) / 1120));
+  flex: 1 0 content;
 }
 
 .header--cart-menu {
@@ -193,10 +191,22 @@ body {
   display: flex;
   justify-content: flex-end;
   justify-content: end;
-  -moz-column-gap: 28px;
-       column-gap: 28px;
-  -moz-column-gap: calc(10px + 18 * ((100vw - 320px) / 1120));
-       column-gap: calc(10px + 18 * ((100vw - 320px) / 1120));
+}
+.menu__item {
+  padding-top: 10px;
+  padding-top: calc(5px + 5 * ((100vw - 320px) / 1120));
+  padding-bottom: 10px;
+  padding-bottom: calc(5px + 5 * ((100vw - 320px) / 1120));
+  padding-left: 18px;
+  padding-left: calc(5px + 13 * ((100vw - 320px) / 1120));
+  padding-right: 18px;
+  padding-right: calc(5px + 13 * ((100vw - 320px) / 1120));
+}
+.menu__item:hover, .menu__item:active, .menu__item:focus {
+  background-color: #575445;
+}
+.menu__item:hover .menu__link, .menu__item:active .menu__link, .menu__item:focus .menu__link {
+  color: #ffffff;
 }
 .menu__link {
   font-size: 14px;
@@ -217,12 +227,12 @@ body {
   gap: 8px;
 }
 .cart-menu__cart-btn::before {
-  content: url("./images/header/cart-icon.svg");
+  content: url("/images/header/cart-icon.svg");
   width: 17px;
   height: 17px;
 }
 .cart-menu__cart-btn::after {
-  content: url("./images/0header/items-in-cart.svg");
+  content: url("/images/0header/items-in-cart.svg");
   width: 20px;
   height: 20px;
 }
@@ -386,14 +396,8 @@ body {
 }
 
 /*styles for store section*/
-.image-bg {
-  width: 379px;
-  width: calc(50px + 329 * ((100vw - 320px) / 1120));
-}
-
 .image-bg img {
-  width: 379px;
-  width: calc(110px + 269 * ((100vw - 320px) / 1120));
+  max-width: 100%;
   border-radius: 12px;
 }
 
@@ -421,16 +425,13 @@ body {
 }
 
 .goods-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  gap: calc(5px + 10 * ((100vw - 320px) / 1120));
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-columns: repeat(3, minmax(270px, 1fr));
+  gap: 16px;
+  gap: calc(5px + 11 * ((100vw - 320px) / 1120));
 }
 .goods-list__item {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: 379px;
-  flex-basis: calc(90px + 289 * ((100vw - 320px) / 1120));
   position: relative;
 }
 .goods-list__description {
@@ -591,8 +592,7 @@ body {
   display: grid;
   grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content min-content;
-  grid-template-columns: 600px;
-  grid-template-columns: calc(400px + 200 * ((100vw - 320px) / 1120));
+  grid-template-columns: minmax(400px, 600px);
   row-gap: 7px;
 }
 .buyers-guide__link {
@@ -605,8 +605,7 @@ body {
 
 .offer {
   display: grid;
-  grid-template-columns: -webkit-min-content -webkit-min-content;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: minmax(300px, 0.5fr) minmax(300px, 0.5fr);
   -moz-column-gap: 32px;
        column-gap: 32px;
   -moz-column-gap: calc(10px + 22 * ((100vw - 320px) / 1120));
@@ -616,13 +615,10 @@ body {
   display: grid;
   grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content min-content;
-  grid-template-columns: -webkit-min-content;
-  grid-template-columns: min-content;
   row-gap: 12px;
 }
 .offer__img img {
-  width: 568px;
-  width: calc(150px + 418 * ((100vw - 320px) / 1120));
+  width: 100%;
 }
 .offer__txt {
   font-size: 20px;
@@ -751,13 +747,15 @@ body {
   margin-bottom: 9px;
 }
 .menu-tree__bough {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.menu-tree__leaf, .menu-tree__leaf > a {
   font-size: 14px;
   line-height: 1.4;
   text-transform: initial;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
 }
 .menu-tree__leaf--newsletter {
   background: #f9fafb;

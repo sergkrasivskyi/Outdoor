@@ -19,7 +19,7 @@
       <!-- <div class="none"> -->
       <div class="container">
         <!-- none-->
-        <header class="header--outdoor">
+        <header class="header--outdoor" id="header">
           <div class="header--logo">
             <!-- logo-outdoor svg -->
             <svg
@@ -41,19 +41,21 @@
           <nav class="header--menu menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="#" class="menu__link">Shop</a>
+                <a href="#shop-section" class="menu__link">Shop</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">About us</a>
+                <a href="#about-us-section" class="menu__link">About us</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Our team</a>
+                <a href="#our-products-section" class="menu__link">Our team</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Buyer's guides</a>
+                <a href="#buyers-guide-section" class="menu__link"
+                  >Buyer's guides</a
+                >
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Categories</a>
+                <a href="#store-section" class="menu__link">Categories</a>
               </li>
             </ul>
           </nav>
@@ -117,7 +119,7 @@
           <!-- about-us section -->
           <div class="container">
             <!-- none -->
-            <section class="about-us">
+            <section class="about-us" id="about-us-section">
               <figure class="about-us__img">
                 <div class="about-us__img-tr">
                   <svg
@@ -186,7 +188,7 @@
             </section>
           </div>
           <!-- our-products section-->
-          <div class="our-products__section-wrapper">
+          <div class="our-products__section-wrapper" id="our-products-section">
             <!--  none -->
             <!-- wrapper for background color  -->
             <div class="container">
@@ -319,7 +321,7 @@
           </div>
           <!-- store section -->
           <div class="container">
-            <section class="store">
+            <section class="store" id="store-section">
               <div class="store__description">
                 <h4 class="store__subtitle section-subtitle">
                   Meet the family
@@ -335,7 +337,7 @@
               </div>
               <ul class="store__goods-list goods-list">
                 <!-- accessories -->
-                <li class="goods-list__item">
+                <li class="goods-list__item" id="store-accessories">
                   <div class="goods-list__description">
                     <h5 class="goods-list__title">Accessories</h5>
                     <p class="goods-list__txt">
@@ -365,7 +367,7 @@
                   </div>
                 </li>
                 <!-- apparel -->
-                <li class="goods-list__item">
+                <li class="goods-list__item" id="store-apparel">
                   <div class="goods-list__description">
                     <h5 class="goods-list__title">Apparel</h5>
                     <p class="goods-list__txt">
@@ -395,7 +397,7 @@
                   </div>
                 </li>
                 <!-- climbing -->
-                <li class="goods-list__item">
+                <li class="goods-list__item" id="store-climbing">
                   <div class="goods-list__description">
                     <h5 class="goods-list__title">Climbing Gear</h5>
                     <p class="goods-list__txt">
@@ -425,7 +427,7 @@
                   </div>
                 </li>
                 <!-- headwear -->
-                <li class="goods-list__item">
+                <li class="goods-list__item" id="store-headwear">
                   <div class="goods-list__description">
                     <h5 class="goods-list__title">Headwear</h5>
                     <p class="goods-list__txt">
@@ -455,7 +457,7 @@
                   </div>
                 </li>
                 <!-- hiking gear -->
-                <li class="goods-list__item">
+                <li class="goods-list__item" id="store-hiking">
                   <div class="goods-list__description">
                     <h5 class="goods-list__title">Hiking Gear</h5>
                     <p class="goods-list__txt">
@@ -485,7 +487,7 @@
                   </div>
                 </li>
                 <!-- jackets -->
-                <li class="goods-list__item">
+                <li class="goods-list__item" id="store-jackets">
                   <div class="goods-list__description">
                     <h5 class="goods-list__title">Jackets</h5>
                     <p class="goods-list__txt">
@@ -627,7 +629,7 @@
             </div>
           </section>
           <!-- shop section -->
-          <section class="shop">
+          <section class="shop" id="shop-section">
             <div class="container">
               <div class="shop__description">
                 <h5 class="shop__subtitle section-subtitle">shop</h5>
@@ -646,7 +648,7 @@
         <!-- / advertising -->
         <!-- buyers-guide -->
         <div class="container">
-          <section class="buyers-guide">
+          <section class="buyers-guide" id="buyers-guide-section">
             <!-- none -->
             <div class="buyers-guide__description">
               <h4 class="buyers-guide__subtitle section-subtitle">
@@ -814,14 +816,21 @@
               />
             </svg>
           </div>
+          <!-- footer menu -->
           <ul class="footer__menu-tree menu-tree">
             <li class="menu-tree__branch">
               <p>Pages</p>
               <ul class="menu-tree__bough">
-                <li class="menu-tree__leaf">Home</li>
-                <li class="menu-tree__leaf">Shop</li>
-                <li class="menu-tree__leaf">Categories</li>
-                <li class="menu-tree__leaf">Buyer's guides</li>
+                <li class="menu-tree__leaf"><a href="#header">Home</a></li>
+                <li class="menu-tree__leaf">
+                  <a href="#shop-section">Shop</a>
+                </li>
+                <li class="menu-tree__leaf">
+                  <a href="#store-section">Categories</a>
+                </li>
+                <li class="menu-tree__leaf">
+                  <a href="#buyers-guide-section">Buyer's guides</a>
+                </li>
                 <li class="menu-tree__leaf">404</li>
                 <li class="menu-tree__leaf">Password</li>
               </ul>
@@ -829,18 +838,32 @@
             <li class="menu-tree__branch">
               <p>Gear categories</p>
               <ul class="menu-tree__bough">
-                <li class="menu-tree__leaf">Hiking Gear</li>
-                <li class="menu-tree__leaf">Climbing Gear</li>
-                <li class="menu-tree__leaf">Jackets</li>
-                <li class="menu-tree__leaf">Accessories</li>
-                <li class="menu-tree__leaf">Apparel</li>
-                <li class="menu-tree__leaf">Headwear</li>
+                <li class="menu-tree__leaf">
+                  <a href="#store-hiking">Hiking Gear</a>
+                </li>
+                <li class="menu-tree__leaf">
+                  <a href="#store-climbing">Climbing Gear</a>
+                </li>
+                <li class="menu-tree__leaf">
+                  <a href="#store-jackets">Jackets</a>
+                </li>
+                <li class="menu-tree__leaf">
+                  <a href="#store-accessories">Accessories</a>
+                </li>
+                <li class="menu-tree__leaf">
+                  <a href="#store-apparel">Apparel</a>
+                </li>
+                <li class="menu-tree__leaf">
+                  <a href="#store-headwear">Headwear</a>
+                </li>
               </ul>
             </li>
             <li class="menu-tree__branch">
               <p>Company</p>
               <ul class="menu-tree__bough">
-                <li class="menu-tree__leaf">About us</li>
+                <li class="menu-tree__leaf">
+                  <a href="#about-us-section">About us</a>
+                </li>
                 <li class="menu-tree__leaf">Our team</li>
                 <li class="menu-tree__leaf">Contact</li>
                 <li class="menu-tree__leaf">Terms & Conditions</li>

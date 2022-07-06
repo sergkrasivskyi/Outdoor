@@ -1,13 +1,10 @@
 /*styles for store section*/
 .image-bg {
-	@include adaptive-property("width", 379, 50, 1);
 
-	// max-width: 100%;
 }
 
 .image-bg img {
-	// max-width: 100%;
-	@include adaptive-property("width", 379, 110 , 1);
+	max-width: 100%;
 	border-radius: 12px;
 }
 
@@ -59,19 +56,14 @@
 }
 
 .goods-list {
-	display: flex;
-	flex-wrap: wrap;
-	// gap: 16px;
-	@include adaptive-property("gap", 15, 5, 1);
+	display: grid;
+	grid-template-rows: 0.5fr 0.5fr;
+	grid-template-columns: repeat(3, minmax(270px, 1fr));
+	@include adaptive-property("gap", 16, 5, 1);
 
 	// .goods-list__item
 
 	&__item {
-		// width: 379px;
-		// flex: 0 1 32.3%;
-		flex-grow: 0;
-		flex-shrink: 1;
-		@include adaptive-property("flex-basis", 379, 90, 1);
 		position: relative;
 	}
 

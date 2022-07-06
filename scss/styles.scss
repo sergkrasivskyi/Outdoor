@@ -128,6 +128,9 @@ $store-link-lh: 1.4;
 $store-link-cl: #575445;
 
 /* common classes styles*/
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	font-family: "Poppins", sans-serif;
@@ -137,6 +140,7 @@ body {
 	@include adaptive-property("font-size", 16, 12, 1);
 	font-size: $main-fz;
 	margin: 0 auto;
+	
 }
 
 .none {
@@ -167,8 +171,10 @@ body {
 	// @include adaptive-property("max-width", 1440, 320, 1);
 	// @include adaptive-property("max-width", 1440, 320, 2);
 	// padding max - 136px, for example min 50px
-	@include adaptive-property("padding-left", 136, 0, 1);
-	@include adaptive-property("padding-right", 136, 0, 1);
+	
+	// @include adaptive-property("padding-left", 136, 0, 1);
+	// @include adaptive-property("padding-right", 136, 0, 1);
+	padding: 0 136px;
 	margin: 0 auto;
 }
 

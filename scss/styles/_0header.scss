@@ -25,11 +25,11 @@
 }
 
 .header--menu {
-	// flex: 1 0 460px;
+	flex: 1 0 content;
 	// 460px; to 300px
-	flex-grow: 1;
-	flex-shrink: 1;
-	@include adaptive-property("flex-basis", 460, 300, 1);
+	// flex-grow: 1;
+	// flex-shrink: 0;
+	// @include adaptive-property("flex-basis", 460, 300, 1);
 }
 
 .header--cart-menu {
@@ -52,11 +52,23 @@
 		justify-content: flex-end;
 		justify-content: end;
 		// column-gap: 28px; to 10px
-		@include adaptive-property("column-gap", 28, 10, 1);
+		// @include adaptive-property("column-gap", 28, 10, 1);
 	}
 
 	// .menu__item
 	&__item {
+		@include adaptive-property("padding-top", 10, 5, 1);
+		@include adaptive-property("padding-bottom", 10, 5, 1);
+		@include adaptive-property("padding-left", 18, 5, 1);
+		@include adaptive-property("padding-right", 18, 5, 1);
+	}
+	&__item:hover,
+	&__item:active,
+	&__item:focus {
+		.menu__link {
+			color: $header-btn-cl;
+		}
+		background-color: $header-btn-bg-cl;
 	}
 
 	// .menu__link
@@ -83,7 +95,7 @@
 	}
 
 	&__cart-btn::before {
-		content: url('./images/header/cart-icon.svg');
+		content: url("/images/header/cart-icon.svg");
 		width: 17px;
 		height: 17px;
 		// background-size: contain;
@@ -91,7 +103,7 @@
 	}
 
 	&__cart-btn::after {
-		content: url("./images/0header/items-in-cart.svg");
+		content: url("/images/0header/items-in-cart.svg");
 		width: 20px;
 		height: 20px;
 		// background-size: contain;
