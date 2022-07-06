@@ -6,7 +6,7 @@
 /* values for adaptive  property */
 //
 $maxWidth: 1440;
-$maxWidthContainer: 90.33vw;
+$maxWidthContainer: 1168;
 $screen-сoefficient: calc((100vw - 320px) / (1440 - 320));
 $padding-container: calc(50px + (136 - 50) * $screen-сoefficient);
 
