@@ -543,9 +543,7 @@ body {
 .shop {
   background: #375c58 center url("./../../images/6shop-section/pattern-bg.svg") repeat;
   padding-top: 100px;
-  padding-top: calc(10px + 90 * ((100vw - 320px) / 1120));
   padding-bottom: 100px;
-  padding-bottom: calc(10px + 90 * ((100vw - 320px) / 1120));
 }
 .shop__description {
   margin: 0 auto;
@@ -558,21 +556,15 @@ body {
   font-size: 14px;
   line-height: 1.4;
   color: #fafafc;
-  font-size: 14px;
-  font-size: calc(9px + 5 * ((100vw - 320px) / 1120));
 }
 .shop__title {
   font-size: 36px;
   line-height: 1.2;
   color: #e6b939;
   font-family: "Roboto";
-  font-size: 36px;
-  font-size: calc(16px + 20 * ((100vw - 320px) / 1120));
 }
 .shop__txt {
   color: #fafafc;
-  font-size: 16px;
-  font-size: calc(10px + 6 * ((100vw - 320px) / 1120));
 }
 .shop__link {
   display: inline-block;
@@ -735,6 +727,11 @@ body {
   line-height: 1.4;
   color: #ffffff;
 }
+.footer__rights-link:hover, .footer__rights-link:focus, .footer__rights-link:active {
+  background-color: #ffffff;
+  color: #575445;
+  font-style: italic;
+}
 .footer__socials {
   grid-row: 4;
   grid-column: 2;
@@ -760,11 +757,15 @@ body {
   flex-direction: column;
   gap: 9px;
 }
-.menu-tree__leaf, .menu-tree__leaf > a {
+.menu-tree__leaf, .menu-tree__leaf a {
   font-size: 14px;
   line-height: 1.4;
   text-transform: initial;
   color: #ffffff;
+}
+.menu-tree__leaf a:hover, .menu-tree__leaf:focus, .menu-tree__leaf a:active {
+  background-color: #ffffff;
+  color: #575445;
 }
 .menu-tree__leaf--newsletter {
   background: #f9fafb;

@@ -45,6 +45,13 @@
 		line-height: 1.4;
 		color: #ffffff;
 	}
+	&__rights-link:hover,
+	&__rights-link:focus,
+	&__rights-link:active {
+		background-color: #ffffff;
+		color: #575445;
+		font-style: italic;
+	}
 
 	// .footer__socials
 
@@ -59,7 +66,7 @@
 	grid-template-rows: 1fr;
 	grid-template-columns: 0.2fr 0.2fr 0.2fr 0.41fr;
 	column-gap: 16px;
-	
+
 	// .menu-tree__branch
 
 	&__branch {
@@ -82,11 +89,18 @@
 
 	// .menu-tree__leaf
 
-	&__leaf, &__leaf > a {
+	&__leaf,
+	&__leaf a {
 		font-size: 14px;
 		line-height: 1.4;
 		text-transform: initial;
 		color: #ffffff;
+	}
+	&__leaf a:hover,
+	&__leaf:focus,
+	&__leaf a:active {
+		background-color: #ffffff;
+		color: #575445;
 	}
 	&__leaf--newsletter {
 		background: #f9fafb;
