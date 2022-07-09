@@ -180,8 +180,6 @@ body {
   display: flex;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  -moz-column-gap: calc(10px + 10 * ((100vw - 320px) / 1120));
-       column-gap: calc(10px + 10 * ((100vw - 320px) / 1120));
   justify-content: flex-end;
 }
 
@@ -205,6 +203,8 @@ body {
 .menu__item:hover, .menu__item:active, .menu__item:focus {
   background-color: #575445;
   border-bottom: 3px solid #e6b939;
+  transition-delay: 100ms;
+  transition: 0.2s ease-in;
 }
 .menu__item:hover .menu__link, .menu__item:active .menu__link, .menu__item:focus .menu__link {
   color: #ffffff;
@@ -228,6 +228,12 @@ body {
   flex-shrink: 0;
   flex-basis: auto;
 }
+.cart-menu__cart-btn::before {
+  content: url("/images/header/cart-icon.svg");
+}
+.cart-menu__cart-btn::after {
+  content: url("/images/0header/items-in-cart.svg");
+}
 .cart-menu__cart-btn {
   flex: 0 0 auto;
   display: flex;
@@ -235,34 +241,25 @@ body {
   align-items: center;
   gap: 8px;
 }
-.cart-menu__cart-btn::before {
-  content: url("/images/header/cart-icon.svg");
-  width: 17px;
-  height: 17px;
-}
-.cart-menu__cart-btn::after {
-  content: url("/images/0header/items-in-cart.svg");
-  width: 20px;
-  height: 20px;
-}
 .cart-menu__purchase-btn, .cart-menu__cart-btn {
+  border: 3px solid transparent;
   font-size: 16px;
   line-height: 1.4;
   color: #ffffff;
   background-color: #575445;
   border-radius: 6px;
   font-size: 16px;
-  font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
-  padding-top: 10px;
-  padding-top: calc(5px + 5 * ((100vw - 320px) / 1120));
-  padding-bottom: 10px;
-  padding-bottom: calc(5px + 5 * ((100vw - 320px) / 1120));
-  padding-left: 15px;
-  padding-left: calc(5px + 10 * ((100vw - 320px) / 1120));
-  padding-right: 15px;
-  padding-right: calc(5px + 10 * ((100vw - 320px) / 1120));
-  line-height: 1.4px;
-  line-height: calc(1.1px + 0.3 * ((100vw - 320px) / 1120));
+  padding: 7px 15px;
+}
+.cart-menu__purchase-btn:hover, .cart-menu__purchase-btn:focus, .cart-menu__purchase-btn:active {
+  border: 3px solid #575445;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #575445;
+  background-color: #ffffff;
+  border-radius: 6px;
+  transition-delay: 100ms;
+  transition: 0.2s ease-in;
 }
 
 /*styles for hero section*/

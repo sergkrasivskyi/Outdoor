@@ -26,7 +26,7 @@
 
 .header--menu {
 	flex: 1 0 content;
-	justify-content: flex-end
+	justify-content: flex-end;
 	// 460px; to 300px
 	// flex-grow: 1;
 	// flex-shrink: 0;
@@ -41,8 +41,9 @@
 	// @include adaptive-property("flex-basis", 288, 150, 1);
 
 	display: flex;
-	// column-gap: 20px; to 10px
-	@include adaptive-property("column-gap", 20, 10, 1);
+	column-gap: 20px;
+
+	// @include adaptive-property("column-gap", 20, 10, 1);
 	justify-content: flex-end;
 }
 
@@ -75,8 +76,14 @@
 		}
 		background-color: $header-btn-bg-cl;
 		// border-top: 3px solid #e6b939;
-		border-bottom: 3px solid #e6b939;
 		// border-radius: 6px;
+		border-bottom: 3px solid #e6b939;
+		transition-delay: 100ms;
+		transition: 0.2s ease-in;
+		// transform: translate(4px, 4px) rotate(10deg);
+		// transform: translate(4px, 4px);
+		// transform: translate(4px, 4px);
+		// transition-property: margin-right, color;
 	}
 
 	// .menu__link
@@ -85,7 +92,7 @@
 	}
 	// делаем ссылкой весь элемент, а не только сам текст
 	&__link::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -103,6 +110,21 @@
 		// @include adaptive-property("flex-basis", 143, 90, 1);
 	}
 
+	&__cart-btn::before {
+		content: url("/images/header/cart-icon.svg");
+		// width: 17px;
+		// height: 17px;
+		// background-size: contain;
+		// background-repeat: no-repeat;
+	}
+
+	&__cart-btn::after {
+		content: url("/images/0header/items-in-cart.svg");
+		// width: 20px;
+		// height: 20px;
+		// background-size: contain;
+		// background-repeat: no-repeat;
+	}
 	&__cart-btn {
 		flex: 0 0 auto;
 		display: flex;
@@ -111,34 +133,32 @@
 		gap: 8px;
 	}
 
-	&__cart-btn::before {
-		content: url("/images/header/cart-icon.svg");
-		width: 17px;
-		height: 17px;
-		// background-size: contain;
-		// background-repeat: no-repeat;
-	}
-
-	&__cart-btn::after {
-		content: url("/images/0header/items-in-cart.svg");
-		width: 20px;
-		height: 20px;
-		// background-size: contain;
-		// background-repeat: no-repeat;
-	}
-
 	&__purchase-btn,
 	&__cart-btn {
+		border: 3px solid transparent;
 		@include styler-btn($header-btn-fz, $header-btn-lh, $header-btn-cl, $header-btn-bg-cl, $header-btn-br);
 		// fz 16->12
-		@include adaptive-property("font-size", 16, 12, 1);
-		// padding: 10px 18px;
-		@include adaptive-property("padding-top", 10, 5, 1);
-		@include adaptive-property("padding-bottom", 10, 5, 1);
-		@include adaptive-property("padding-left", 15, 5, 1);
-		@include adaptive-property("padding-right", 15, 5, 1);
-		// line-height: 1.4 -> 1
-		@include adaptive-property("line-height", 1.4, 1.1, 1);
+		// @include adaptive-property("font-size", 16, 12, 1);
+		font-size: 16px;
+		padding: 7px 15px;
+		// @include adaptive-property("padding-top", 10, 5, 1);
+		// @include adaptive-property("padding-bottom", 10, 5, 1);
+		// @include adaptive-property("padding-left", 15, 5, 1);
+		// @include adaptive-property("padding-right", 15, 5, 1);
+		// @include adaptive-property("line-height", 1.4, 1.1, 1);
 		//
+	}
+	&__purchase-btn:hover,
+	&__purchase-btn:focus,
+	&__purchase-btn:active {
+		border: 3px solid $header-btn-bg-cl;
+		@include styler-btn($header-btn-fz, $header-btn-lh, $header-btn-bg-cl, $header-btn-cl, $header-btn-br);
+
+		transition-delay: 100ms;
+		transition: 0.2s ease-in;
+		// transform: translate(4px, 4px) rotate(10deg);
+		// transform: translate(4px, 4px);
+		// transform: translate(4px, 4px);
+		// transition-property: margin-right, color;
 	}
 }
